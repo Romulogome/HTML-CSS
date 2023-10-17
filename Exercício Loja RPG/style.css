@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/*
+Created on: 8 de out. de 2023
+Author: Rômulo Heleno Gomes Viana
+*/
+@font-face {
+    font-family: "Open Sans";
+    src: url("fonts/open_sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf")
+    format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: "Louis George";
+    src: url("fonts/louis_george/Louis\ George\ Cafe.ttf")
+    format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    }
+
+body {
+    background-color: #9E997E;
+    font-size: 16px;
+}
+
+#principal >  h1{
+    font-family: Open Sans;
+    color: #0E1B4F;
+    font-style: italic;
+}
+
+#principal > a{
+    background-color: #E0D9C0;
+    padding: 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+#principal > a:hover{
+    background-color: #0B1133;
+    color: white;
+}
+
+#inicio{
+    font-size: 1.2em;
+}
+
+#links{
+    background-color: #E0D9C0;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+#links > li,a{
+    color: black;
+    font-size: 1.1em;
+}
+
+#lista >li,a{
+    text-decoration: none;
+}
+
+#inicio > h2{
+    font-family: Open Sans;
+    text-align: left;
+    color: #0E1B4F;
+    font-size: 1.2em;
+}
+
+#inicio > p{
+    font-family: Louis George;
+    text-align: left;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+#rodape{
+    background-color: #E0D9C0;
+    font-family: Louis George;
+    font-size: 1.2em;
+    text-align: justify;
+    border-radius: 10px;
+    padding: 0.5px;
+}
