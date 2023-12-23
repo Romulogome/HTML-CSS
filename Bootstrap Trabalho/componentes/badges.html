@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/badges.css">
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <ul>
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="">Documentação</a></li>
+                <li><a href="paginas/pagina2.html">Componentes</a></li>
+                <li><a href="/paginas/pagina5.html">Exemplos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+    <div class="sidebar">
+        <!-- Conteúdo da barra lateral -->
+        <ul>
+            <li><a href="/paginas/pagina2.html">Alertas</a></li> 
+            <li><a href="/componentes/cores-de-links.html" ta target="_self">Cores de links</a></li>
+            <li><a href="/componentes/badges.html">Badges</a></li>
+            <li><a href="/componentes/breadcrumb.html">Breadcrumb</a></li>
+            <li><a href="/componentes/botoes.html">Botões</a></li>
+            <li><a href="/componentes/grupos-botoes.html" target="_self">Grupos de botões</a></li>
+            <li><a href="">Cards</a></li>
+            <li><a href="">Carousel</a></li>
+            <li><a href="">Collapse</a></li>
+            <li><a href="">Dropdowns</a></li>
+            <li><a href="">Formulários</a></li>
+            <li><a href="/paginas/pagina3.html">Grupo de input</a></li>
+            <li><a href="/componentes/grupos-lista.html">Grupo de lista</a></li>
+            <li><a href="/componentes/modal.html">Modal</a></li>
+            <li><a href="">Navs</a></li>
+            <li><a href="/componentes/Paginação.html">Paginação</a></li>
+            <li><a href="/componentes/Popovers.html">Popovers</a></li>
+            <li><a href="/componentes/Progress.html">Progress</a></li>
+            <li><a href="/componentes/Scrollspy.html">Scrollspy</a></li>
+            <li><a href="/paginas/pagina4.html">Tooltips</a></li>
+        </ul>
+    </div>
+    <main>            
+            <div class="content">
+                <!-- Conteúdo centralizado -->
+                <article>
+                    <h1>Badges</h1>
+                    <p>Documentação e exemplos sobre os badges, nosso pequeno componente para contagem e rótulos.</p>
+                    <h2>Exemplo</h2>
+                    <p>Os badges escalam para combinar com o tamanho do elemento pai imediato, usando font-size relativa e unidade <strong>em</strong>.</p>
+                <div id="exemplo-cabecalho">
+                    <h1 class="texto">Cabeçalho exemplo <a id="novo1" href="#">  Novo</a></h1> 
+                    <h2 class="texto">Cabeçalho exemplo <a id="novo2" href="#">  Novo</a></h2> 
+                    <h3 class="texto">Cabeçalho exemplo <a id="novo3" href="#">  Novo</a></h3> 
+                    <h4 class="texto">Cabeçalho exemplo <a id="novo4" href="#">  Novo</a></h4> 
+                    <h5 class="texto">Cabeçalho exemplo <a id="novo5" href="#">  Novo</a></h5> 
+                    <h6 class="texto">Cabeçalho exemplo<a id="novo6" href="#">  Novo</a></h6> 
+                </div>
+                <div class="codigo">
+<pre class="language-html">
+    <code>
+    &lt;h1 class="badge badge-secondary"&gt;Cabeçalho exemplo&gt;Novo&lt;/h1&gt;
+    &lt;h6 class="badge badge-secondary"&gt;Cabeçalho exemplo&gt;Novo&lt;/h6&gt;
+    &lt;h2 class="badge badge-secondary"&gt;Cabeçalho exemplo&gt;Novo&lt;/h2&gt;
+    &lt;h3 class="badge badge-secondary"&gt;Cabeçalho exemplo&gt;Novo&lt;/h3&gt;
+    &lt;h4 class="badge badge-secondary"&gt;Cabeçalho exemplo&gt;Novo&lt;/h4&gt;
+    &lt;h5 class="badge badge-secondary"&gt;Cabeçalho exemplo&gt;Novo&lt;/h5&gt;
+    </code>
+</pre>
+                </div>
+                <p>Badges podem ser usados como parte de links ou botões para realizar contagem.</p>
+                <div id="button-exemplo">
+                    <button type="button" id="exemplo">Notificações <span id="n4">4</span></button>
+                </div>
+                <div class="codigo">
+<pre class="language-html">
+    <code>
+    &lt;button type="button" class="btn btn-primary"&gt;
+        Notificações &lt;span class="badge badge-light"&gt;4&lt/span&gt;
+    &lt;/button&gt;
+    </code>
+</pre>
+                </div>
+                <p>Perceba que dependendo do uso, badges podem ser confusos para usuários de leitores de telas e tecnologias assistivas similares. Apesar do estilo dos badges serem intuitivos, esses usuários vão ser apresentados só ao conteúdo contido neles. Por isso, dependendo da situação, esses badges podem parecer palavras ou números quaisquer ao final da frase, link ou botão.</p>
+                <p>A não ser que o contexto esteja claro (como no exemplo “Notificações”, onde é entendido que o 4 é o número de notificações), considere criar contexto com um texto adicional escondido visualmente.</p>
+                <div id="button-exemplo">
+                    <button type="button" id="exemplo">Perfil <span id="n4">9</span></button>
+                </div>
+                <div class="codigo">
+<pre class="language-html">
+    <code>
+    &lt;button type="button" class="btn btn-primary"&gt;
+        Perfil &lt;span class="badge badge-light"&gt;9&lt;/span&gt;
+        &lt;span class="sr-only"&gt;Mensagens não lidas&lt;/span&gt;
+    &lt;/button&gt;
+    </code>
+</pre>
+                </div>
+                <h2>Variações contextuais</h2>
+                <p>Adicione qualquer uma das classes modificadoras mencionadas abaixo para mudar a aparência de um badge.</p>
+                <div id="box-badge">
+                    <p id="badge1" class="cor">Primary</p>
+                    <p id="badge2" class="cor">Secondary</p>
+                    <p id="badge3" class="cor">Sucess</p>
+                    <p id="badge4" class="cor">Danger</p>
+                    <p id="badge5" class="cor">Warning</p>
+                    <p id="badge6" class="cor">Info</p>
+                    <p id="badge7" class="cor">Light</p>
+                    <p id="badge8" class="cor">Dark</p>
+                </div>
+                <div class="codigo">
+<pre class="language-html">
+    <code>
+    &lt;span class="badge badge-primary"&gt;Primary&lt;/span&gt;
+    &lt;span class="badge badge-secondary"&gt;Secondary&lt;/span&gt;
+    &lt;span class="badge badge-success"&gt;Success&lt;/span&gt;
+    &lt;span class="badge badge-danger"&gt;Danger&lt;/span&gt;
+    &lt;span class="badge badge-warning"&gt;Warning&lt;/span&gt;
+    &lt;span class="badge badge-info"&gt;Info&lt;/span&gt;
+    &lt;span class="badge badge-light"&gt;Light&lt;/span&gt;
+    &lt;span class="badge badge-dark"&gt;Dark&lt;/span&gt;   
+    </code>
+</pre>
+                </div>
+                <div id="sr-class">
+                    <h2>Transmitindo significado a tecnologias assistivas</h2>
+                    <p>Usando cor para adicionar significado só fornece uma indicação visual, a qual não será transmitida para usuários de tecnologias assistivas (como leitores de telas). Se assegure que a informação denotada pela cor é tanto destacada do conteúdo (ex: o texto visível) ou está incluída em meios alternativos, como textos extras escondidos com a classe .sr-class.</p>
+                </div>
+                <h2>Badges em pílulas</h2>
+                <p>Use a classe modificadora .badge-pill para fazer com que os badges fiquem mais arredondados (border-radius maior e padding horizontal adicional). É útil se você precisa dos badges da v3.</p>
+                <div id="box-badge">
+                    <p id="badge1" class="cor">Primary</p>
+                    <p id="badge2" class="cor">Secondary</p>
+                    <p id="badge3" class="cor">Sucess</p>
+                    <p id="badge4" class="cor">Danger</p>
+                    <p id="badge5" class="cor">Warning</p>
+                    <p id="badge6" class="cor">Info</p>
+                    <p id="badge7" class="cor">Light</p>
+                    <p id="badge8" class="cor">Dark</p>
+                </div>
+                <div class="codigo">
+<pre class="language-html">
+    <code>
+    &lt;span class="badge badge-pill badge-primary"&gt;Primary&lt;/span&gt;
+    &lt;span class="badge badge-pill badge-secondary"&gt;Secondary&lt;/span&gt;
+    &lt;span class="badge badge-pill badge-success"&gt;Success&lt;/span&gt;
+    &lt;span class="badge badge-pill badge-danger"&gt;Danger&lt;/span&gt;
+    &lt;span class="badge badge-pill badge-warning"&gt;Warning&lt;/span&gt;
+    &lt;span class="badge badge-pill badge-info"&gt;Info&lt;/span&gt;
+    &lt;span class="badge badge-pill badge-light"&gt;Light&lt;/span&gt;
+    &lt;span class="badge badge-pill badge-dark"&gt;Dark&lt;/span>&lt;   
+    </code>
+</pre>
+                </div>
+                <h2>Links</h2>
+                <p>Usando as classes contextuais .badge-*, em um elemento &lt;a&gt;, rapidamente, consiga badges acionáveis com estados hover e focus.</p>
+                <div id="box-links">
+                    <button id="links1" class="cor">Primary</button>
+                    <button id="links2" class="cor">Secondary</button>
+                    <button id="links3" class="cor">Sucess</button>
+                    <button id="links4" class="cor">Danger</button>
+                    <button id="links5" class="cor">Warning</button>
+                    <button id="links6" class="cor">Info</button>
+                    <button id="links7" class="cor">Light</button>
+                    <button id="links8" class="cor">Dark</button>
+                </div>
+                <div class="codigo">
+<pre class="language-html">
+    <code>
+    &lt;a href="#" class="badge badge-primary"&gt;Primary&lt;/a&gt;
+    &lt;a href="#" class="badge badge-secondary"&gt;Secondary&lt;/a&gt;
+    &lt;a href="#" class="badge badge-success"&gt;Success&lt;/a&gt;
+    &lt;a href="#" class="badge badge-danger"&gt;Danger&lt;/a&gt;
+    &lt;a href="#" class="badge badge-warning"&gt;Warning&lt;/a&gt;
+    &lt;a href="#" class="badge badge-info"&gt;Info&lt;/a&gt;
+    &lt;a href="#" class="badge badge-light"&gt;Light&lt;/a&gt;
+    &lt;a href="#" class="badge badge-dark"&gt;Dark&lt;/a&gt; 
+    </code>
+</pre>
+                </div>
+            </article>
+            </div>
+        </div>
+        
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.js"></script>
+</body>
+</html>

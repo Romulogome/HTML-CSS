@@ -1,0 +1,7 @@
+COR 1 = #F2D49B
+COR 2 = #733702
+COR 3 = #A69586
+COR 4 = #592202
+COR 5 = #400D01
+
+<span class="blue"><span class="red"></span></span>

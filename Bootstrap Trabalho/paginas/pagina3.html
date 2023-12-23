@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/grupos-botoes.css">
+</head>
+<header>
+    <nav class="navigation">
+        <ul>
+            <li><a href="/index.html">Início</a></li>
+            <li><a href="">Documentação</a></li>
+            <li><a href="/paginas/pagina2.html">Componentes</a></li>
+            <li><a href="/paginas/pagina5.html">Exemplos</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <div class="sidebar sidebar-right">
+        <!-- Conteúdo da barra lateral direita -->
+        <ul>
+            <li><a href="/paginas/pagina2.html">Alertas</a></li>
+            <li><a href="/componentes/cores-de-links.html" ta target="_self">Cores de links</a></li>
+            <li><a href="/componentes/badges.html">Badges</a></li>
+            <li><a href="/componentes/breadcrumb.html">Breadcrumb</a></li>
+            <li><a href="/componentes/botoes.html">Botões</a></li>
+            <li><a href="/componentes/grupos-botoes.html" target="_self">Grupos de botões</a></li>
+            <li><a href="">Cards</a></li>
+            <li><a href="">Carousel</a></li>
+            <li><a href="">Collapse</a></li>
+            <li><a href="">Dropdowns</a></li>
+            <li><a href="">Formulários</a></li>
+            <li><a href="/paginas/pagina3.html">Grupo de input</a></li>
+            <li><a href="/componentes/grupos-lista.html">Grupo de lista</a></li>
+            <li><a href="/componentes/modal.html">Modal</a></li>
+            <li><a href="">Navs</a></li>
+            <li><a href="/componentes/Paginação.html">Paginação</a></li>
+            <li><a href="/componentes/Popovers.html">Popovers</a></li>
+            <li><a href="/componentes/Progress.html">Progress</a></li>
+            <li><a href="/componentes/Scrollspy.html">Scrollspy</a></li>
+            <li><a href="/paginas/pagina4.html">Tooltips</a></li>
+        </ul>
+    </div>
+<body>
+    <main>
+        <div class="content">
+            <!-- Conteúdo centralizado -->
+            <article id="grupo-input">
+                <h1>Grupo de input</h1>
+                <p>Facilmente, extenda os controles de formulário com textos, botões, selects personalizados, etc.</p>
+
+                <h2>Exemplo básico</h2>
+                <p>Coloque um add-on ou botão em qualquer um dos lados de um input. Você também pode colocar um botão em
+                    cada lado do input. No entanto, lembre-se de colocar o <code>&lt;label&gt;</code> fora do grupo de
+                    input.
+                </p>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Usuário" aria-label="Usuário"
+                        aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Recipiente para nickname"
+                        aria-label="Recipiente para nickname" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">@exemplo.com</span>
+                    </div>
+                </div>
+
+                <label for="basic-url">Sua tão honrada URL</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">https://exemplo.com.br/users/</span>
+                    </div>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">R$</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Quantia">
+                    <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Addon com textarea</span>
+                    </div>
+                    <textarea class="form-control" aria-label="Com textarea"></textarea>
+                </div>
+                <div>
+                    <pre class="language-html">
+    <code>
+    &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+        &lt;span class="input-group-text" id="basic-addon1"&gt;@&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="text" class="form-control" placeholder="Usuário" aria-label="Usuário" aria-describedby="basic-addon1"&gt;
+    &lt;/div&gt;
+    &lt;div class="input-group mb-3"&gt;
+    &lt;input type="text" class="form-control" placeholder="Recipiente para nickname" aria-label="Recipiente para nickname" aria-describedby="basic-addon2"&gt;
+    &lt;div class="input-group-append"&gt;
+        &lt;span class="input-group-text" id="basic-addon2"&gt;@exemplo.com&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;label for="basic-url"&gt;Sua tão honrada URL&lt;/label&gt;
+    &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+        &lt;span class="input-group-text" id="basic-addon3"&gt;https://exemplo.com.br/users/&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3"&gt;
+    &lt;/div&gt;
+    &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+        &lt;span class="input-group-text"&gt;R$&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="text" class="form-control" aria-label="Quantia"&gt;
+    &lt;div class="input-group-append"&gt;
+        &lt;span class="input-group-text"&gt;.00&lt;/&gt;
+    &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class="input-group"&gt;
+    &lt;div class="input-group-prepend"&gt;
+        &lt;span class="input-group-text">&gt;Addon com textarea&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;textarea class="form-control" aria-label="Com textarea"&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    </code>
+</pre>
+                </div>
+                <h2>Tamanhos</h2>
+                <p>Use as classes de dimensionamento de formulário no <code>.input-group</code> e conteúdos dentro dele
+                    vão,
+                    automaticamente, redimensionar (não é necessário classes de dimensionamento em cada elemento).</p>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Pequeno</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Exemplo do tamanho do input"
+                        aria-describedby="inputGroup-sizing-sm">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Padrão</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Exemplo do tamanho do input"
+                        aria-describedby="inputGroup-sizing-default">
+                </div>
+
+                <div class="input-group input-group-lg">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Grande</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Exemplo do tamanho do input"
+                        aria-describedby="inputGroup-sizing-lg">
+                </div>
+                <div>
+                    <pre class="language-html">
+    <code>
+    &lt;div class="input-group input-group-sm mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+    &lt;span class="input-group-text" id="inputGroup-sizing-sm"&gt;"Pequeno"&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="text" class="form-control" aria-label="Exemplo do tamanho do input"
+        aria-describedby="inputGroup-sizing-sm"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend>&gt;
+    &lt;span class="input-group-text" id="inputGroup-sizing-default"&gt;"Padrão"&lt;/spa>&gt;
+    &lt;/div&gt;
+    &lt;input type="text" class="form-control" aria-label="Exemplo do tamanho do input"
+        aria-describedby="inputGroup-sizing-default"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="input-group input-group-lg"&gt;
+    &lt;div class="input-group-prepend"&gt;
+    &lt;span class="input-group-text" id="inputGroup-sizing-lg"&gt;"Grande"&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type="text" class="form-control" aria-label="Exemplo do tamanho do input"
+        aria-describedby="inputGroup-sizing-lg"&gt;
+    &lt;/div&gt;
+    </code>
+</pre>
+                </div>
+
+    <h2>Checkboxes e radios</h2>
+    <p>Coloque qualquer checkbox ou radio dentro do addon de grupo de input, invés de texto.</p>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <input type="checkbox" aria-label="Chebox para permitir input text">
+            </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Input text com checkbox">
+    </div>
+
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <input type="radio" aria-label="Botão radio para acompanhar input text">
+            </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Input text com botão radio">
+    </div>
+    <div>
+        <pre class="language-html">
+    <code>
+    &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+    &lt;div class="input-group-text"&gt;
+            &lt;input type="checkbox" aria-label="Chebox para permitir input text"&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+        &lt;input type="text" class="form-control" aria-label="Input text com checkbox"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="input-group>&gt;
+    &lt;div class="input-group-prepend"&gt;
+        &lt;div class="input-group-text"&gt;
+        &lt;input type="radio" aria-label="Botão radio para acompanhar input text"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;input type="text" class="form-control" aria-label="Input text com botão radio"&gt;
+    &lt;/div&gt;
+    </code>
+</pre>
+    </div>
+    <h2>Múltiplos inputs</h2>
+    <p>Apesar de múltiplos &lt;input&gt; serem suportados (visualmente), estilos de validação só estão disponíveis para
+        grupos de input com um único &lt;input&gt;</p>
+
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Nome e sobrenome</span>
+        </div>
+        <input type="text" aria-label="First name" class="form-control">
+        <input type="text" aria-label="Last name" class="form-control">
+    </div>
+    <div>
+        <pre class="language-html">
+    <code>
+    &lt;div class="input-group"&gt;
+    &lt;div class="input-group-prepend"&gt;
+        &lt;span class="input-group-text"&gt;Nome e sobrenome&lt;/span&gt;
+    &lt;/div&gt;
+        &lt;input type="text" aria-label="First name" class="form-control"&gt;
+        &lt;input type="text" aria-label="Last name" class="form-control"&gt;
+    &lt;/div&gt;
+    </code>
+</pre>
+    </div>
+
+    <h2>Múltiplos addons</h2>
+    <p>Múltiplos add-ons são suportados e podem ser misturados com input checkbox e radio.</p>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">R$</span>
+            <span class="input-group-text">0.00</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Quantia em Dollar (com ponto e duas casas decimais)">
+    </div>
+
+    <div class="input-group">
+        <input type="text" class="form-control" aria-label="Quantia em Dollar (com ponto e duas casas decimais)">
+        <div class="input-group-append">
+            <span class="input-group-text">R$</span>
+            <span class="input-group-text">0.00</span>
+        </div>
+    </div>
+    <div>
+        <pre class="language-html">
+    <code>
+    &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+        &lt;span class="input-group-text"&gt;R$&lt;/span&gt;
+        &lt;span class="input-group-text"</span>&gt;0.00&lt;/span&gt;
+    &lt;/div&gt;
+        &lt;input type="text" class="form-control" aria-label="Quantia em Dollar (com ponto e duas casas decimais)"&gt;
+    &lt;/div&gt;
+    &lt;div class="input-group"&gt;
+        &lt;input type="text" class="form-control" aria-label="Quantia em Dollar (com ponto e duas casas decimais)"&gt;
+    &lt;div class="input-group-append"&gt;
+        &lt;span class="input-group-text"&gt;R$&&lt;/span&gt;
+        &lt;span class="input-group-text"&gt;0.00&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    </code>
+</pre>
+    </div>
+    <h2>Botões addons</h2>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon1">Botão</button>
+        </div>
+        <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+            aria-describedby="button-addon1">
+    </div>
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
+            aria-describedby="button-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Botão</button>
+        </div>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend" id="button-addon3">
+            <button class="btn btn-outline-secondary" type="button">Botão</button>
+            <button class="btn btn-outline-secondary" type="button">Botão</button>
+        </div>
+        <input type="text" class="form-control" placeholder="" aria-label="Example text with two button addons"
+            aria-describedby="button-addon3">
+    </div>
+
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Recipient's username"
+            aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+        <div class="input-group-append" id="button-addon4">
+            <button class="btn btn-outline-secondary" type="button">Botão</button>
+            <button class="btn btn-outline-secondary" type="button">Botão</button>
+        </div>
+    </div>
+    <div>
+        <pre class="language-html">
+    <code>
+    &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+        &lt;button class="btn btn-outline-secondary" type="button" id="button-addon1"&gt;Botão&lt;/button&gt;
+    &lt;/div&gt;
+        &lt;input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"&gt;
+    &lt;/div&gt;
+    &lt;div class="input-group mb-3"&gt;
+        &lt;input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2"&gt;
+    &lt;div class="input-group-append>&gt;
+        &lt;button class="btn btn-outline-secondary" type="button" id="button-addon2"&gt;Botão&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend" id="button-addon3"&gt;
+        &lt;button class="btn btn-outline-secondary" type="button"&gt;Botão&lt;/button&gt;
+        &lt;button class="btn btn-outline-secondary" type="button"&gt;Botão&lt;/button&gt;
+    &lt;/div&gt;
+        &lt;input type="text" class="form-control" placeholder="" aria-label="Example text with two button addons" aria-describedby="button-addon3"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="input-group"&gt;
+        &lt;input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4"&gt;
+    &lt;div class="input-group-append" id="button-addon4"&gt;
+        &lt;button class="btn btn-outline-secondary" type="button"&gt;Botão&lt;/button&gt;
+        &lt;button class="btn btn-outline-secondary" type="button"&gt;Botão&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    </code>
+</pre>
+    </div>
+    <h2>Botões com dropdowns</h2>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Dropdown</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Ação</a>
+                <a class="dropdown-item" href="#">Outra ação</a>
+                <a class="dropdown-item" href="#">Algo mais aqui</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Link isolado</a>
+            </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Input text com botão dropdown">
+    </div>
+
+    <div class="input-group">
+        <input type="text" class="form-control" aria-label="Input text com botão dropdown">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Dropdown</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Ação</a>
+                <a class="dropdown-item" href="#">Outra ação</a>
+                <a class="dropdown-item" href="#">Algo mais aqui</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Link isolado</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <pre class="language-html">
+    <code>
+    &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+        &lt;button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;Dropdown&lt;/button&gt;
+    &lt;div class="dropdown-menu"&gt;
+        &lt;a class="dropdown-item" href="#"&gt;Ação&lt;/a&gt;
+       &lt;a class="dropdown-item" href="#"&gt;Outra ação&lt;/a&gt;
+        &lt;a class="dropdown-item" href="#"&gt;Algo mais aqui&lt;/a&gt;
+    &lt;div role="separator" class="dropdown-divider"&gt;&lt;/div&gt;
+        &lt;a class="dropdown-item" href="#"&gt;Link isolado&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+        &lt;input type="text" class="form-control" aria-label="Input text com botão dropdown"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="input-group"&gt;
+        &lt;input type="text" class="form-control" aria-label="Input text com botão dropdown"&gt;
+    &lt;div class="input-group-append"&gt;
+        &lt;button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;Dropdown&lt;/button&gt;
+    &lt;div class="dropdown-menu"&gt;
+        &lt;a class="dropdown-item" href="#"&gt;Ação&lt;/a&gt;
+        &lt;a class="dropdown-item" href="#"</span>&gt;Outra ação&lt;/a&gt;
+        &lt;a class="dropdown-item" href="#"</span>&gt;Algo mais aqui&lt;/a&gt;
+        &lt;div role="separator" class="dropdown-divider"&gt;&lt;/div&gt;
+        &lt;a class="dropdown-item" href="#"&gt;Link isolado&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    </code>
+</pre>
+    </div>
+    <h2>Botões segmentados</h2>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button type="button" class="btn btn-outline-secondary">Ação</button>
+            <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Ação</a>
+                <a class="dropdown-item" href="#">Outra ação</a>
+                <a class="dropdown-item" href="#">Algo mais aqui</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Link isolado</a>
+            </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Input dropdown com botão dropdown segmentado">
+    </div>
+
+    <div class="input-group">
+        <input type="text" class="form-control" aria-label="Input dropdown com botão dropdown segmentado">
+        <div class="input-group-append">
+            <button type="button" class="btn btn-outline-secondary">Ação</button>
+            <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Ação</a>
+                <a class="dropdown-item" href="#">Outra ação</a>
+                <a class="dropdown-item" href="#">Algo mais aqui</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Link isolado</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <pre class="language-html">
+    <code>
+    &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+        &lt;tbutton type="button" class="btn btn-outline-secondary"&gt;Ação&lt;button&gt;
+        &lt;tbutton type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+        &lt;span class="sr-only"&gt;Dropdown&lt;span&gt;
+        &lt;button&gt;
+    &lt;div class="dropdown-menu"&gt;
+        &lt;a class="dropdown-item" href="#"&gt;Ação&lt;a&gt;
+        &lt;a class="dropdown-item" href="#"&gt;Outra ação&lt;a&gt;
+        &lt;a class="dropdown-item" href="#&gt;Algo mais aqui&lt;a&gt;
+        &lt;div role="separator" class="dropdown-divider"&gt;&lt;div&gt;
+        &lt;a class="dropdown-item" href="#"&gt;Link isolado&lt;&gt;
+    &lt;div&gt;
+    &lt;div&gt;
+        &ltinput type="text" class="form-control" aria-label="Input dropdown com botão dropdown segmentado"&gt;
+    &lt;div&gt;
+
+    &lt;div class="input-group"&gt;
+        &lt;input type="text" class="form-control" aria-label="Input dropdown com botão dropdown segmentado"&gt;
+        &lt;div class="input-group-append"&gt;
+        &lt;button type="button" class="btn btn-outline-secondary"&gt;Ação&lt;button&gt;
+        &lt;button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+        &lt;span class="sr-only"&gt;Dropdown&lt;span&gt;
+    &lt;button&gt;
+    &lt;div class="dropdown-menu"&gt;
+        &lt;a class="dropdown-item" href="#"&gt;Ação&lt;a&gt;
+        &lt;a class="dropdown-item" href="#"&gt;Outra ação&lt;a&gt;
+        &lt;a class="dropdown-item" href="#"&gt;Algo mais aqui&lt;a&gt;
+        &lt;div role="separator" class="dropdown-divider"&gt;&lt;div&gt;
+        &lt;a class="dropdown-item" href="#"&gt;Link isolado&lt;a&gt;
+    &lt;div&gt;
+    &lt;div&gt;
+    &lt;div&gt;
+    </code>
+</pre>
+    </div>
+    <h2>Formulários personalizados</h2>
+    <p>Grupos de input possuem suporte para selects e inputs de arquivos personalizados. As versões padrões de browsers
+        deles não é suportada.</p>
+
+    <h2>Select personalizado</h2>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Opções</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01">
+            <option selected>Escolher...</option>
+            <option value="1">Um</option>
+            <option value="2">Dois</option>
+            <option value="3">Três</option>
+        </select>
+    </div>
+
+    <div class="input-group mb-3">
+        <select class="custom-select" id="inputGroupSelect02">
+            <option selected>Escolher...</option>
+            <option value="1">Um</option>
+            <option value="2">Dois</option>
+            <option value="3">Três</option>
+        </select>
+        <div class="input-group-append">
+            <label class="input-group-text" for="inputGroupSelect02">Opções</label>
+        </div>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="button">Botão</button>
+        </div>
+        <select class="custom-select" id="inputGroupSelect03" aria-label="Exemplo de select com botão addon">
+            <option selected>Escolher...</option>
+            <option value="1">Um</option>
+            <option value="2">Dois</option>
+            <option value="3">Três</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <select class="custom-select" id="inputGroupSelect04" aria-label="Exemplo de select com botão addon">
+            <option selected>Escolher...</option>
+            <option value="1">Um</option>
+            <option value="2">Dois</option>
+            <option value="3">Três</option>
+        </select>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">Botão</button>
+        </div>
+    </div>
+    <div>
+<pre class="language-html">
+    <code>
+    &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+        &lt;label class="input-group-text" for="inputGroupSelect01"&gt;Opções&lt;/label&gt;
+    &lt;/div&gt;
+        &lt;select class="custom-select" id="inputGroupSelect01"&gt;
+        &lt;option selected&gt;Escolher...&lt;/option&gt;
+        &lt;option value="1"&gt;Um&lt;/option&gt;
+        &lt;option value="2"&gt;Dois&lt;/option&gt;
+        &lt;option value="3"&gt;Três&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+
+    &lt;div class="input-group mb-3"&gt;
+        &lt;select class="custom-select" id="inputGroupSelect02"&gt;
+        &lt;option selected&gt;Escolher...&lt;/option&gt;
+        &lt;option value="1"&gt;Um&lt;/option&gt;
+        &lt;option value="2"&gt;Dois&lt;/option&gt;
+        &lt;option value="3"&gt;Três&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;div class="input-group-append"&gt;
+        &lt;label class="input-group-text" for="inputGroupSelect02"&gt;Opções&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+        &lt;button class="btn btn-outline-secondary" type="button"&gt;Botão&lt;/button&gt;
+    &lt;/div&gt;
+        &lt;select class="custom-select" id="inputGroupSelect03" aria-label="Exemplo de select com botão addon"&gt;
+        &lt;option selected&gt;Escolher...&lt;/option&gt;
+        &lt;option value="1"&gt;Um&lt;/option&gt;
+        &lt;option value="2"&gt;Dois&lt;/option&gt;
+        &lt;option value="3"&gt;Três&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+
+    &lt;div class="input-group"&gt;
+        &lt;select class="custom-select" id="inputGroupSelect04" aria-label="Exemplo de select com botão addon"&gt;
+        &lt;option selected&gt;Escolher...&lt;/option&gt;
+        &lt;option value="1"&gt;Um&lt;/option&gt;
+        &lt;option value="2"&gt;Dois&lt;/option&gt;
+        &lt;option value="3"&gt;Três&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;div class="input-group-append"</span>&gt;
+        &lt;button class="btn btn-outline-secondary" type="button"&gt;Botão&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    </code>
+</pre>
+    </div>
+    <h2>Input de arquivo personalizado</h2>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+        </div>
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+            <label class="custom-file-label" for="inputGroupFile01">Escolher arquivo</label>
+        </div>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile02">
+            <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Escolher
+                arquivo</label>
+        </div>
+        <div class="input-group-append">
+            <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+        </div>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03">Botão</button>
+        </div>
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
+            <label class="custom-file-label" for="inputGroupFile03">Escolher arquivo</label>
+        </div>
+    </div>
+
+    <div class="input-group">
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+            <label class="custom-file-label" for="inputGroupFile04">Escolher arquivo</label>
+        </div>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Botão</button>
+        </div>
+    </div>
+        <div>
+<pre class="language-html">
+    <code>
+    &lt;div class="input-group mb-3>&gt;
+    &lt;div class="input-group-prepend"&gt;
+        &lt;span class="input-group-text" id="inputGroupFileAddon01"&gt;Upload&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="custom-file"&gt;
+        &lt;input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"&gt;
+        &lt;label class="custom-file-label" for="inputGroupFile01"&gt;Escolher arquivo&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="input-group mb-3"&gt;
+    &lt;div class="custom-file"&gt;
+        &lt;input type="file" class="custom-file-input" id="inputGroupFile02"&gt;
+        &lt;label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02"&gt;Escolher arquivo&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="input-group-append"&gt;
+        &lt;span class="input-group-text" id="inputGroupFileAddon02"&gt;Upload&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="input-group mb-3"&gt;
+    &lt;div class="input-group-prepend"&gt;
+        &lt;button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03"&gt;Botão&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;div class="custom-file"&gt;
+        &lt;input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03"&gt;
+        &lt;label class="custom-file-label" for="inputGroupFile03"&gt;Escolher arquivo&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="input-group"&gt;
+    &lt;div class="custom-file"&gt;
+        &lt;input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"&gt;
+        &lt;label class="custom-file-label" for="inputGroupFile04"&gt;Escolher arquivo&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="input-group-append"&gt;
+        &lt;button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04"&gt;Botão&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    </code>
+</pre>
+            </div>
+    <h2>Acessibilidade</h2>
+    <p>Leitores de telas vão ter problemas com seus formulários se você não incluir um &lt;label&gt; para cada input.
+        Para estes grupos de input, se assegure de que qualquer label ou funcionalidade extra seja percebida pelas
+        tecnologias assistivas.
+
+        A melhor técnica (elementos &lt;label&gt; escondidos usando a classe .sr-only ou o uso dos atributos aria-label
+        e aria-labelledby, possivelmente, acompanhados do aria-describedby) e informação a ser transmitida vai variar,
+        dependendo do tipo de interface que você está implementando. Os exemplos, nesta seção, dão algumas sugestões,
+        para casos diferentes.</p>
+    </div>
+        
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.js"></script>
+</main>
+</body>
+</html>

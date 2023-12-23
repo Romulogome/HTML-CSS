@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollspy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/Scrollspy.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <ul>
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="">Documentação</a></li>
+                <li><a href="paginas/pagina2.html">Componentes</a></li>
+                <li><a href="/paginas/pagina5.html">Exemplos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Conteúdo da barra lateral direita -->
+        <div class="sidebar sidebar-right">
+            <ul>
+                <li><a href="#scrollspy">Scrollspy</a></li>
+                <li><a href="#fat">Fat</a></li>
+                <li><a href="#um">Um</a></li>
+                <li><a href="#2">Dois</a></li>
+                <li><a href="#3">Três</a></li>
+                <li><a href="#aninhada">Exemplo nav aninhada</a></li>
+                <li><a href="#data">Atributos Data</a></li>
+                <li><a href="#java">Via Javascript</a></li>
+                <li><a href="#metodos">Metodos</a></li>
+                <li><a href="#parametros">Parâmetros</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+            </ul>
+        </div>
+        <div class="sidebar sidebar-left">
+            <!-- Conteúdo da barra lateral direita -->
+            <ul>
+                <li><a href="/paginas/pagina2.html">Alertas</a></li>
+                <li><a href="/componentes/cores-de-links.html" ta target="_self">Cores de links</a></li>
+                <li><a href="/componentes/badges.html" target="_self">Badges</a></li>
+                <li><a href="/componentes/breadcrumb.html" target="_self">Breadcrumb</a></li>
+                <li><a href="/componentes/botoes.html" target="_self">Botões</a></li>
+                <li><a href="/componentes/grupos-botoes.html" target="_self">Grupos de botões</a></li>
+                <li><a href="">Cards</a></li>
+                <li><a href="">Carousel</a></li>
+                <li><a href="">Collapse</a></li>
+                <li><a href="">Dropdowns</a></li>
+                <li><a href="">Formulários</a></li>
+                <li><a href="/paginas/pagina3.html">Grupo de input</a></li>
+                <li><a href="/componentes/grupos-lista.html">Grupo de lista</a></li>
+                <li><a href="/componentes/modal.html">Modal</a></li>
+                <li><a href="">Navs</a></li>
+                <li><a href="/componentes/Paginação.html">Paginação</a></li>
+                <li><a href="/componentes/Popovers.html">Popovers</a></li>
+                <li><a href="/componentes/Progress.html">Progress</a></li>
+                <li><a href="/componentes/Scrollspy.html">Scrollspy</a></li>
+                <li><a href="/paginas/pagina4.html">Tooltips</a></li>
+            </ul>
+        </div>
+        <main>
+            <div class="content">
+                <article>
+                    <h1 id="scrollspy">Scrollspy</h1>
+                    <p>Automaticamente, atualize componentes de navegação ou grupo de listas, baseando-se na área
+                        visível do
+                        site, para indicar qual link está ativo na viewport, no momento.</p>
+                </article>
+                <article>
+                    <h2>Como funciona</h2>
+                    <p>O scrollspy tem algumas exigências para funcionar direito:</p>
+                    <ul>
+                        <li>Se você está montando nosso JavaScript a partir da fonte, precisará do util.js;</li>
+                        <li>Este componente deve ser usado em um componente nav ou grupo de lista;</li>
+                        <li>Scrollspy pede que tenha <span class="red">position: relative;</span> no elemento que você
+                            está
+                            espiando a área visível (normalmente, é o <span>&lt;body&gt;</span>);</li>
+                        <li>Quando espiando elementos que não sejam o <span>&lt;body&gt;</span>, se assegure de ter
+                            declarado
+                            <span class="red">height</span> e <span class="red">overflow-y: scroll;</span>;
+                        </li>
+                        <li>É preciso usar âncoras (<span class="red">&lt;a&gt;</span>), as quais devem referenciar o
+                            elemento,
+                            com o <span class="red">id</span> especificado.</li>
+                    </ul>
+                    <p>Quando implementado com sucesso, sua nav ou grupo de lista vai se atualizar de acordo com a área
+                        visível,
+                        movendo a classe <span class="red">.active</span> de um item para o outro.</p>
+
+                    <div class="ex">
+                        <h4 id="fat">@fat</h4>
+                        <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they
+                            sold out
+                            qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit
+                            seitan mcsweeney's photo
+                            booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you
+                            probably haven't heard
+                            of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed
+                            accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+
+                        <h4 id="mdo">@mdo</h4>
+                        <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard
+                            aliqua
+                            cupidatat
+                            mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla carles. Tattooed cosby
+                            sweater food
+                            truck,
+                            mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non aesthetic
+                            exercitation quis
+                            gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.</p>
+
+                        <h4 id="um">um</h4>
+                        <p>Occaecat commodo aliqua delectus. Fap craft beer deserunt skateboard ea. Lomo bicycle rights
+                            adipisicing banh
+                            mi, velit ea sunt next level locavore single-origin coffee in magna veniam. High life id
+                            vinyl, echo
+                            park
+                            consequat quis aliquip banh mi pitchfork. Vero VHS est adipisicing. Consectetur nisi DIY
+                            minim
+                            messenger bag.
+                            Cred ex in, sustainable delectus consectetur fanny pack iphone.</p>
+
+                        <h4 id="dois">dois</h4>
+                        <p>In incididunt echo park, officia deserunt mcsweeney's proident master cleanse thundercats
+                            sapiente
+                            veniam.
+                            Excepteur VHS elit, proident shoreditch +1 biodiesel laborum craft beer. Single-origin
+                            coffee
+                            wayfarers irure
+                            four loko, cupidatat terry richardson master cleanse. Assumenda you probably haven't heard
+                            of them
+                            art party
+                            fanny pack, tattooed nulla cardigan tempor ad. Proident wolf nesciunt sartorial keffiyeh eu
+                            banh mi
+                            sustainable. Elit wolf voluptate, lo-fi ea portland before they sold out four loko. Locavore
+                            enim
+                            nostrud
+                            mlkshk brooklyn nesciunt.</p>
+
+                        <h4 id="tres">três</h4>
+                        <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they
+                            sold out
+                            qui. Tumblr
+                            farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                            mcsweeney's photo
+                            booth 3
+                            wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably
+                            haven't
+                            heard of
+                            them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed
+                            accusamus, cred
+                            irony
+                            biodiesel keffiyeh artisan ullamco consequat.</p>
+
+                        <p>Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id
+                            assumenda. Locavore
+                            sed helvetica cliche irony, thundercats you probably haven't heard of them consequat hoodie
+                            gluten-free lo-fi
+                            fap aliquip. Labore elit placeat before they sold out, terry richardson proident brunch
+                            nesciunt
+                            quis cosby
+                            sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer seitan readymade velit.
+                            VHS
+                            chambray laboris
+                            tempor veniam. Anim mollit minim commodo ullamco thundercats.</p>
+                    </div>
+
+                    <div>
+                        <pre class="language-javascript">
+<code>
+    &lt;nav id="navbar-exemplo2" class="navbar navbar-light bg-light"&gt;
+    &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+    &lt;ul class="nav nav-pills"&gt;
+        &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#fat"&gt;@fat&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link" href="#mdo"&gt;@mdo&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item dropdown"&gt;
+        &lt;a class="nav-link dropdown-toggle" data-toggle="dropdown"<br> href="#" role="button" aria-haspopup="true" aria-expanded="false"&gt;Dropdown&lt;/a&gt;
+        &lt;div class="dropdown-menu"&gt;
+            &lt;a class="dropdown-item" href="#um"&gt;um&lt;/a&gt;
+            &lt;a class="dropdown-item" href="#dois"&gt;dois&lt;/a&gt;
+            &lt;div role="separator" class="dropdown-divider"&gt;&lt;/div&gt;
+            &lt;a class="dropdown-item" href="#tres"&gt;tres&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;div data-spy="scroll" data-target="#navbar-exemplo2" data-offset="0"&gt;
+    &lt;h4 id="fat"&gt;@fat&lt;/h4&gt;
+    &lt;p&gt;...&lt;/p&gt;
+    &lt;h4 id="mdo"&gt;@mdo&lt;/h4&gt;
+    &lt;p&gt;...&lt;/p&gt;
+    &lt;h4 id="um"&gt;um&lt;/h4&gt;
+    &lt;p&gt;...&lt;/p&gt;
+    &lt;h4 id="dois"&gt;dois&lt;/h4&gt;
+    &lt;p&gt;...&lt;/p&gt;
+    &lt;h4 id="tres"&gt;tres&lt;/h4&gt;
+    &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+</code>
+</pre>
+                    </div>
+                </article>
+                <article>
+                    <h2 id="aninhada">Exemplo com nav aninhada</h2>
+                    <p>Scrollspy também funciona com <span class="red">.nav</span>s aninhados. Se um .nav está ativo,
+                        seu pai
+                        também estará ativado. Role pela a área próximo ao navbar e veja a classe <span
+                            class="red">.active</span> ser alterada.</p>
+
+
+                    <nav id="sidebar">
+                        <div class="navbar navbar-light bg-light">
+                            <a class="navbar-brand" href="#">Navbar</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link" href="#item-1">Item 1</a>
+                                <nav class="nav nav-pills flex-column">
+                                    <a class="nav-link ml-3 my-1" href="#item-1-1">Item 1.1</a>
+                                    <a class="nav-link ml-3 my-1" href="#item-1-2">Item 1.2</a>
+                                </nav>
+                                <a class="nav-link" href="#item-2">Item 2</a>
+                                <a class="nav-link" href="#item-3">Item 3</a>
+                                <nav class="nav nav-pills flex-column">
+                                    <a class="nav-link ml-3 my-1" href="#item-3-1">Item 3.1</a>
+                                    <a class="nav-link ml-3 my-1" href="#item-3-2">Item 3.2</a>
+                                </nav>
+                            </nav>
+                        </div>
+                    </nav>
+
+                    <div id="content" data-spy="scroll" data-target="#sidebar" data-offset="0">
+                        <div class="section" id="item-1">
+                            <h4>Item 1</h4>
+                            <p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua
+                                id
+                                magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur
+                                labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum
+                                do
+                                non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et
+                                incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt
+                                mollit
+                                dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo
+                                velit
+                                ut eiusmod cupidatat elit dolore.</p>
+                        </div>
+                        <div class="section" id="item-1-1">
+                            <h5>Item 1.1</h5>
+                            <p>Amet tempor mollit aliquip pariatur excepteur commodo do ea cillum commodo Lorem et
+                                occaecat
+                                elit qui et. Aliquip labore ex ex esse voluptate occaecat Lorem ullamco deserunt. Aliqua
+                                cillum excepteur irure consequat id quis ea. Sit proident ullamco aute magna pariatur
+                                nostrud labore. Reprehenderit aliqua commodo eiusmod aliquip est do duis amet proident
+                                magna
+                                consectetur consequat eu commodo fugiat non quis. Enim aliquip exercitation ullamco
+                                adipisicing voluptate excepteur minim exercitation minim minim commodo adipisicing
+                                exercitation officia nisi adipisicing. Anim id duis qui consequat labore adipisicing
+                                sint
+                                dolor elit cillum anim et fugiat.</p>
+                        </div>
+                        <div class="section" id="item-1-2">
+                            <h5>Item 1.2</h5>
+                            <p>Cillum nisi deserunt magna eiusmod qui eiusmod velit voluptate pariatur laborum sunt
+                                enim.
+                                Irure laboris mollit consequat incididunt sint et culpa culpa incididunt adipisicing
+                                magna
+                                magna occaecat. Nulla ipsum cillum eiusmod sint elit excepteur ea labore enim
+                                consectetur in
+                                labore anim. Proident ullamco ipsum esse elit ut Lorem eiusmod dolor et eiusmod. Anim
+                                occaecat nulla in non consequat eiusmod velit incididunt.</p>
+                        </div>
+                        <div class="section" id="item-2">
+                            <h4>Item 2</h4>
+                            <p>Quis magna Lorem anim amet ipsum do mollit sit cillum voluptate ex nulla tempor. Laborum
+                                consequat non elit enim exercitation cillum aliqua consequat id aliqua. Esse ex
+                                consectetur
+                                mollit voluptate est in duis laboris ad sit ipsum anim Lorem. Incididunt veniam velit
+                                elit
+                                elit veniam Lorem aliqua quis ullamco deserunt sit enim elit aliqua esse irure. Laborum
+                                nisi
+                                sit est tempor laborum mollit labore officia laborum excepteur commodo non commodo dolor
+                                excepteur commodo. Ipsum fugiat ex est consectetur ipsum commodo tempor sunt in
+                                proident.
+                            </p>
+                        </div>
+                        <div class="section" id="item-3">
+                            <h4>Item 3</h4>
+                            <p>Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud
+                                aliqua ipsum fugiat minim proident occaecat excepteur aliquip culpa aute tempor
+                                reprehenderit. Deserunt tempor mollit elit ex pariatur dolore velit fugiat mollit culpa
+                                irure ullamco est ex ullamco excepteur.</p>
+                        </div>
+                        <div class="section" id="item-3-1">
+                            <h5>Item 3.1</h5>
+                            <p>Deserunt quis elit Lorem eiusmod amet enim enim amet minim Lorem proident nostrud. Ea id
+                                dolore anim exercitation aute fugiat labore voluptate cillum do laboris labore. Ex velit
+                                exercitation nisi enim labore reprehenderit labore nostrud ut ut. Esse officia sunt duis
+                                aliquip ullamco tempor eiusmod deserunt irure nostrud irure. Ullamco proident veniam
+                                laboris
+                                ea consectetur magna sunt ex exercitation aliquip minim enim culpa occaecat
+                                exercitation.
+                                Est tempor excepteur aliquip laborum consequat do deserunt laborum esse eiusmod irure
+                                proident ipsum esse qui.</p>
+                        </div>
+                        <div class="section" id="item-3-2">
+                            <h5>Item 3.2</h5>
+                            <p>Labore sit culpa commodo elit adipisicing sit aliquip elit proident voluptate minim
+                                mollit
+                                nostrud aute reprehenderit do. Mollit excepteur eu Lorem ipsum anim commodo sint labore
+                                Lorem in exercitation velit incididunt. Occaecat consectetur nisi in occaecat proident
+                                minim
+                                enim sunt reprehenderit exercitation cupidatat et do officia. Aliquip consequat ad
+                                labore
+                                labore mollit ut amet. Sit pariatur tempor proident in veniam culpa aliqua excepteur
+                                elit
+                                magna fugiat eiusmod amet officia.</p>
+                        </div>
+                    </div>
+            </div>
+
+            <div>
+                <pre class="language-javascript">
+<code>
+    &lt;nav id="navbar-exemplo3" class="navbar navbar-light bg-light"&gt;
+    &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+    &lt;nav class="nav nav-pills flex-column"&gt;
+        &lt;a class="nav-link" href="#item-1"&gt;Item 1&lt;/a&gt;
+        &lt;nav class="nav nav-pills flex-column"&gt;
+        &lt;a class="nav-link ml-3 my-1" href="#item-1-1"&gt;Item 1.1&lt;/a&gt;
+        &lt;a class="nav-link ml-3 my-1" href="#item-1-2"&gt;Item 1.2&lt;/a&gt;
+        &lt;/nav&gt;
+        &lt;a class="nav-link" href="#item-2"&gt;Item 2&lt;/a&gt;
+        &lt;a class="nav-link" href="#item-3"&gt;Item 3&lt;/a&gt;
+        &lt;nav class="nav nav-pills flex-column"&gt;
+        &lt;a class="nav-link ml-3 my-1" href="#item-3-1"&gt;Item 3.1&lt;/a&gt;
+        &lt;a class="nav-link ml-3 my-1" href="#item-3-2"&gt;Item 3.2&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/nav&gt;
+    &lt;/nav&gt;
+
+    &lt;div data-spy="scroll" data-target="#navbar-exemplo3" data-offset="0"&gt;
+    &lt;h4 id="item-1"&gt;Item 1&lt;/h4&gt;
+    &lt;p&gt;...&lt;/p&gt;
+    &lt;h5 id="item-1-1"&gt;Item 1.1&lt;/h5&gt;
+    &lt;p&gt;...&lt;/p&gt;
+    &lt;h5 id="item-1-2"&gt;Item 1.2&lt;/h5&gt;
+    &lt;p&gt;...&lt;/p&gt;
+    &lt;h4 id="item-2"&gt;Item 2&lt;/h4&gt;
+    &lt;p&gt;...&lt;/p&gt;
+    &lt;h4 id="item-3"&gt;Item 3&lt;/h4&gt;
+    &lt;p&gt;...&lt;/p&gt;
+    &lt;h5 id="item-3-1"&gt;Item 3.1&lt;/h5&gt;
+    &lt;p&gt;...&lt;/p&gt;
+    &lt;h5 id="item-3-2"&gt;Item 3.2&lt;/h5&gt;
+    &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+</code>
+</pre>
+            </div>
+            </article>
+            <article>
+                <h2>Modo de uso</h2>
+                <h2 id="data">Via atributos data</h2>
+                <p>Para implementar o comportamento scrollspy na sua navegação superior, facilmente, coloque <span
+                        class="red">data-spy="scroll"</span> no elemento que você quer espiar a área visível (o <span
+                        class="red">&lt;body&gt;</span>, normalmente). Depois, coloque o atributo <span
+                        class="red">data-target</span> com o ID ou classe do elemento pai de qualquer componente
+                    Bootstrap
+                    <span class="red">.nav</span>.
+                </p>
+            </article>
+
+            <div>
+                <pre class="language-css">
+                <code>
+                  body {
+                    position: relative;
+                  }
+                </code>
+              </pre>
+
+                <pre class="language-javascript">
+<code>
+    &lt;body data-spy="scroll" data-target="#navbar-exemplo"&gt;
+    ...
+    &lt;div id="navbar-exemplo"&gt;
+        &lt;ul class="nav nav-tabs" role="tablist"&gt;
+        ...
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    ...
+    &lt;/body&gt;
+</code>
+</pre>
+            </div>
+            <article>
+                <h2 id="java">Via JavaScript</h2>
+                <p>Depois de adicionar <span class="red">position: relative;</span> em seu CSS, invoque o scrollspy,
+                    assim:</p>
+                <div>
+                    <pre class="language-javascript">
+<code>
+    $('body').scrollspy({ target: '#navbar-exemplo' });
+</code>
+</pre>
+                </div>
+            </article>
+            <div class="Ex-vermelho">
+                <h3>IDs alvos válidos são obrigatórios</h3>
+                <p>Links do navbar devem ter IDs alvos válidos. Por exemplo, um <span class="red">&lt;a
+                        href="#home"home&lt;/a&gt;</span> deve remeter a algo no DOM como <span class="red">&lt;div
+                        id="home"&gt;&lt;div&gt;</span>.</p>
+            </div>
+            <div class="Es-azul">
+                <h3>Elementos alvos invisíveis (sem <span class="red">:visible)</span> ) são ignorados</h3>
+                <p>Elementos alvos que não não são considerados visíveis pelo jQuery vão ser ignorados e seus itens nav,
+                    correspondentes, serão destacados.</p>
+            </div>
+            <article>
+                <h2 id="metodos">Métodos</h2>
+                <h3 class="red">.scrollspy('refresh')</h3>
+                <p>Quando usando scrollspy, ao mesmo tempo que adiciona ou remove elementos do DOM, você precisará
+                    invocar o método refresh, de tal forma:</p>
+                <div>
+                    <pre class="language-javascript">
+<code>
+    $('[data-spy="scroll"]').each(function () {
+    var $spy = $(this).scrollspy('refresh');
+    });
+</code>
+</pre>
+                </div>
+
+                <h3>.scrollspy('dispose')</h3>
+                <p>Destrói o scrollspy vinculado a um elemento.</p>
+            </article>
+            <article>
+                <h2 id="parametros">Parâmetros</h2>
+                <p>Parâmetros podem ser passados via atributos data ou JavaScript. No caso de atributos data, anexe o
+                    nome do parâmetro ao prefixo <span class="red">data-</span>, como em <span
+                        class="red">data-offset=""</span>.</p>
+                <div>
+                    <table id="tabela">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Tipo</th>
+                                <th>Padrão</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>offset</td>
+                                <td>number</td>
+                                <td>10</td>
+                                <td>Pixels para deslocar, a partir do topo, quando calculando a posição do scroll.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+            <article>
+                <h2 id="eventos">Eventos</h2>
+                <div>
+                    <table id="tabela">
+                        <thead>
+                            <tr>
+                                <th>Tipo de evento</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>activate.bs.scrollspy</td>
+                                <td>Este evento é acionado no elemento de rolagem, quando um item se torna ativado pelo
+                                    scrollspy.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <pre class="language-javascript">
+<code>
+    $('[data-spy="scroll"]').on('activate.bs.scrollspy', function () {
+    // Faça algo, aqui…
+    });
+</code>
+</pre>
+
+                </div>
+
+            </article>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.js"></script>
+</body>
+
+</html>

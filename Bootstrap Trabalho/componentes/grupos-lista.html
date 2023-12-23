@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/grupo-lista.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navigation">
+      <ul>
+        <li><a href="/index.html">Início</a></li>
+        <li><a href="">Documentação</a></li>
+        <li><a href="/paginas/pagina2.html">Componentes</a></li>
+        <li><a href="/paginas/pagina5.html">Exemplos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="sidebar sidebar-right">
+      <!-- Conteúdo da barra lateral esquerda -->
+      <ul>
+        <li><a href="/paginas/pagina2.html">Alertas</a></li>
+        <li><a href="/componentes/cores-de-links.html" ta target="_self">Cores de links</a></li>
+        <li><a href="/componentes/badges.html" target="_self">Badges</a></li>
+        <li><a href="/componentes/breadcrumb.html" target="_self">Breadcrumb</a></li>
+        <li><a href="/componentes/botoes.html" target="_self">Botões</a></li>
+        <li><a href="/componentes/grupos-botoes.html" target="_self">Grupos de botões</a></li>
+        <li><a href="">Cards</a></li>
+        <li><a href="">Carousel</a></li>
+        <li><a href="">Collapse</a></li>
+        <li><a href="">Dropdowns</a></li>
+        <li><a href="">Formulários</a></li>
+        <li><a href="/paginas/pagina3.html">Grupo de input</a></li>
+        <li><a href="/componentes/grupos-lista.html">Grupo de lista</a></li>
+        <li><a href="/componentes/modal.html">Modal</a></li>
+        <li><a href="">Navs</a></li>
+        <li><a href="/componentes/Paginação.html">Paginação</a></li>
+        <li><a href="/componentes/Popovers.html">Popovers</a></li>
+        <li><a href="/componentes/Progress.html">Progress</a></li>
+        <li><a href="/componentes/Scrollspy.html">Scrollspy</a></li>
+        <li><a href="/paginas/pagina4.html">Tooltips</a></li>
+      </ul>
+    </div>
+  <main>
+    
+      <div class="content">
+        <!-- Conteúdo centralizado -->
+        <article id="grupo-lista">
+          <h1>Grupo de lista</h1>
+          <p>Grupos de listas são componentes flexíveis e poderosos para mostrar vários conteúdos. Modifique e
+            aprimore-o para suportar quase qualquer conteúdo.</p>
+
+          <h2>Exemplo básico</h2>
+          <p>O grupo de lista mais básico é uma
+            &lt;ul&gt; com &lt;li&gt; e algumas classes específicas. Desenvolva com as opções a seguir ou com seu próprio CSS,
+              dependendo da sua necessidade.
+              </p>
+              <div>
+                <p>Cras justo odio</p>
+                <p>Dapibus ac facilisis in</p>
+                <p>Morbi leo risus</p>
+                <p>Porta ac consectetur ac</p>
+                <p>Vestibulum at eros</p>
+              </div>
+
+              <div>
+<pre class="language-html">
+<code>
+  &lt;ul class="list-group"&gt;
+    &lt;li class="list-group-item"</span>&gt;Cras justo odi>&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Dapibus ac facilisis in&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Morbi leo risus&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Porta ac consectetur ac&lt;/li&gt;
+    &lt;li class="list-group-item"</span>&gt;Vestibulum at eros</span>&lt;/li&gt;
+  &lt;/ul&gt;
+</code>
+</pre>
+              </div>
+              <h2>Itens ativos</h2>
+              <p>Use <span class="red">.active</span> em um <span class="red">.list-group-item</span> para indicar a seleção ativa, no momento.</p>
+              <div>
+                <p>Cras justo odio</p>
+                <p>Dapibus ac facilisis in</p>
+                <p>Morbi leo risus</p>
+                <p>Porta ac consectetur ac</p>
+                <p>Vestibulum at eros</p>
+              </div>
+              <div>
+<pre class="language-html">
+<code>
+  &lt;ul class="list-group"&gt;
+    &lt;li class="list-group-item active"&gt;Cras justo odio&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Dapibus ac facilisis in&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Morbi leo risu>&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Porta ac consectetur ac&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Vestibulum at eros&lt;/li&gt;
+  &lt;/ul&gt;
+</code>
+</pre>
+              </div>
+    <h2>Itens desativados</h2>
+    <p>Use <span class="red">.disabled</span> em um <span class="red">.list-group-item</span> para fazê-lo ter aparência desativada. Perceba que alguns elementos com <span class="red">.disabled</span> vão precisar de JavaScript customizado para desativar seus eventos de clique, totalmente (ex: links).
+    </p>
+
+    <div>
+      <p>Cras justo odio</p>
+      <p>Dapibus ac facilisis in</p>
+      <p>Morbi leo risus</p>
+      <p>Porta ac consectetur ac</p>
+      <p>Vestibulum at eros</p>
+    </div>
+
+          <div>
+<pre class="language-html">
+<code>
+  &lt;ul class="list-group"&gt;
+    &lt;li class="list-group-item active"&gt;Cras justo odio&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Dapibus ac facilisis in&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Morbi leo risu>&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Porta ac consectetur ac&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Vestibulum at eros&lt;/li&gt;
+  &lt;/ul&gt;
+</code>
+</pre>
+            </div>
+
+    <h2>Links e botões</h2>
+    <p>Use <span class="red">&lt;ag&gt;</span> ou <span class="red">&lt;button&gt;</span> para criar itens do grupo de lista acionáveis com estados hover, disabled e
+      active, adicionando <span class="red">.list-group-item-action</span>. Nós separamos estas pseudo-classes, para assegurar que grupos de
+      listas feitos com elementos não interativos (tipo <span class="red">&lt;li&gt;</span> ou <span class="red">&lt;div&gt;</span> ) não permitam insinuações de clique ou
+      toque.
+
+      Se assegure de não usar as classes .btn padrões, aqui.</p>
+
+      <div>
+        <p>Cras justo odio</p>
+        <p>Dapibus ac facilisis in</p>
+        <p>Morbi leo risus</p>
+        <p>Porta ac consectetur ac</p>
+        <p>Vestibulum at eros</p>
+      </div>
+      <div>
+<pre class="language-html">
+<code>
+  &lt;div class="list-group"&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action active"&gt;Cras justo odio&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Dapibus ac facilisis in&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Morbi leo risus>&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Porta ac consectetur ac&lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action disabled"&gt;Vestibulum at eros&lt;/a&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+      </div>
+    <p>Com &lt;button&gt;, você também pode fazer uso do atributo disabled, invés da classe .disabled. Infelizmente,
+      elementos &lt;a&gt; não suportam o atributo disabled.</p>
+
+    <div class="list-group">
+      <button type="button" class="list-group-item list-group-item-action active">
+        Cras justo odio
+      </button>
+      <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
+      <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
+      <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac</button>
+      <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at eros</button>
+    </div>
+      <div>
+<pre class="language-html">
+<code>
+  &lt;div class="list-group"&gt;
+    &lt;button type="button" class="list-group-item list-group-item-action active"&gt;Cras justo odio&lt;/button&gt;
+    &lt;button type="button" class="list-group-item list-group-item-action"&gt;Dapibus ac facilisis in&lt;/button&gt;
+    &lt;button type="button" class="list-group-item list-group-item-action"&gt;Morbi leo risus&lt;/button&gt;
+    &lt;button type="button" class="list-group-item list-group-item-action"&gt;Porta ac consectetur ac&lt;/button&gt;
+    &lt;button type="button" class="list-group-item list-group-item-action" disabled&gt;Vestibulum at eros&lt;/button&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+        </div>
+    <h2>Flush</h2>
+    <p>Use .list-group-flush para remover algumas bordas e cantos arredondados para renderizar itens do grupo de lista,
+      de ponta-a-ponta, em um container pai.</p>
+
+      <div>
+        <p>Cras justo odio</p>
+        <p>Dapibus ac facilisis in</p>
+        <p>Morbi leo risus</p>
+        <p>Porta ac consectetur ac</p>
+        <p>Vestibulum at eros</p>
+      </div>
+
+      <div>
+<pre class="language-html">
+<code>
+  &lt;ul class="list-group list-group-flush"&gt;
+    &lt;li class="list-group-item"&gt;Cras justo odio&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Dapibus ac facilisis in&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Morbi leo risus&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Porta ac consectetur ac&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Vestibulum at eros&lt;/li&gt;
+  &lt;/ul&gt;
+</code>
+</pre>
+        </div>
+    <h2>Classes contextuais</h2>
+
+    <p>Use classes contextuais para estilizar itens da lista com belos caracteres e cor de fundo.</p>
+
+    <div id="box-alerta">
+      <p id="cor" class="cor">Dapibus ac facilisis in</li>
+      <p id="cor1" class="cor">Um simples item primary do grupo de lista</li>
+      <p id="cor2" class="cor">Um simples item secondary do grupo de lista</li>
+      <p id="cor3" class="cor">Um simples item success do grupo de lista</li>
+      <p id="cor4" class="cor">Um simples item danger do grupo de lista</li>
+      <p id="cor5" class="cor">Um simples item warning do grupo de lista</li>
+      <p id="cor6" class="cor">Um simples item info do grupo de lista</li>
+      <p id="cor7" class="cor">Um simples item light do grupo de lista</li>
+      <p id="cor8" class="cor">Um simples item dark do grupo de lista</li>
+    </div>
+
+      <div>
+<pre class="language-html">
+<code>
+  &lt;ul class="list-group"&gt;
+    &lt;li class="list-group-item"&gt;Dapibus ac facilisis in&lt;/li&gt;
+    &lt;li class="list-group-item list-group-item-primary"&gt;Um simples item primary do grupo de lista&lt;/li&gt;
+    &lt;li class="list-group-item list-group-item-secondary"&gt;Um simples item secondary do grupo de lista&lt;/li&gt;
+    &lt;li class="list-group-item list-group-item-success"&gt;Um simples item success do grupo de lista&lt;/li&gt;
+    &lt;li class="list-group-item list-group-item-danger"&gt;Um simples item danger do grupo de lista&lt;/li&gt;
+    &lt;li class="list-group-item list-group-item-warning"&gt;Um simples item warning do grupo de lista&lt;/li&gt;
+    &lt;li class="list-group-item list-group-item-info"&gt;Um simples item info do grupo de lista&lt;/li&gt;
+    &lt;li class="list-group-item list-group-item-light"&gt;Um simples item light do grupo de lista&lt;/li&gt;
+    &lt;li class="list-group-item list-group-item-dark"&gt;Um simples item dark do grupo de lista&lt;/li&gt;
+  &lt;/ul&gt;
+</code>
+</pre>
+        </div>
+    <p>Classes contextuais também funcionam com .list-group-item-action. Perceba a presença dos estilos hover, os quais
+      não estavam no presentes no exemplo anterior. O estado .active também é suportado, bastando aplicá-lo para indicar
+      uma seleção ativa em um item do grupo de lista.</p>
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+
+
+      <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Um simples item primary do
+        grupo de lista</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Um simples item secondary do
+        grupo de lista</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-success">Um simples item success do
+        grupo de lista</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Um simples item danger do grupo
+        de lista</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Um simples item warning do
+        grupo de lista</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-info">Um simples item info do grupo de
+        lista</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-light">Um simples item light do grupo de
+        lista</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Um simples item dark do grupo de
+        lista</a>
+    </div>
+
+    <pre class="language-html">
+        <code>
+  &lt;div class="list-group"&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action"&gt;Dapibus ac facilisis in&lt;/a&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action list-group-item-primary"&gt;Um simples item primary do grupo de lista&lt;/a&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action list-group-item-secondary"&gt;Um simples item secondary do grupo de lista&lt;/a&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action list-group-item-success"&gt;Um simples item success do grupo de lista&lt;/a&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action list-group-item-danger"&gt;Um simples item danger do grupo de lista&lt;/a&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action list-group-item-warning"&gt;Um simples item warning do grupo de lista&lt;/a&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action list-group-item-info"&gt;Um simples item info do grupo de lista&lt;/a&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action list-group-item-light"&gt;Um simples item light do grupo de lista&lt;/a&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action list-group-item-dark"&gt;Um simples item dark do grupo de list>&lt;/a&gt;
+&lt;/div&gt;
+
+        </code>
+      </pre>
+
+    <h2>Usando badges</h2>
+    <p>Coloque badges em qualquer item do grupo de lista para exibir contadores, atividade e muito mais, com ajuda de
+      alguns utilitários.</p>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Cras alemanha odio
+        <span class="badge badge-primary badge-pill">7</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Dapibus ac facilisis in
+        <span class="badge badge-primary badge-pill">x</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Morbi brasil risus
+        <span class="badge badge-primary badge-pill">1</span>
+      </li>
+    </ul>
+
+
+<pre class="language-html">
+  <code>
+  &lt;ul class="list-group"&gt;
+  &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
+    Cras alemanha odio
+    &lt;span class="badge badge-primary badge-pill"&gt;7&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
+    Dapibus ac facilisis in
+    &lt;span class="badge badge-primary badge-pill"&gt;x&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
+    Morbi brasil risus
+    &lt;span class="badge badge-primary badge-pill"&gt;1&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+  </code>
+</pre>
+
+    <h2>Conteúdo customizado</h2>
+    <p>Coloque quase qualquer HTML dentro, mesmo em grupos de listas linkados, como o mostrado abaixo, com ajuda de
+      utilitários flexbox.</p>
+
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Cabeçalho do item</h5>
+          <small>3 dias atrás</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+        </p>
+        <small>Donec id elit non mi porta.</small>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Cabeçalho do item</h5>
+          <small class="text-muted">3 dias atrás</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+        </p>
+        <small class="text-muted">Donec id elit non mi porta.</small>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Cabeçalho do item</h5>
+          <small class="text-muted">3 dias atrás</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+        </p>
+        <small class="text-muted">Donec id elit non mi porta.</small>
+      </a>
+    </div>
+
+
+<pre class="language-html">
+    <code>
+  &lt;div class="list-group"&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action flex-column align-items-start active"&gt;
+    &lt;div class="d-flex w-100 justify-content-between"&gt;
+      &lt;h5 class="mb-1"&gt;Cabeçalho do item&lt;/h5&gt;
+      &lt;small&gt;3 dias atrás&lt;/small&gt;
+    &lt;/div&gt;
+    &lt;p class="mb-1"&gt;Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.&lt;/p&gt;
+    &lt;small&gt;Donec id elit non mi porta.&lt;/small&gt;
+  &lt;/a&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action flex-column align-items-start"&gt;
+    &lt;div class="d-flex w-100 justify-content-between"&gt;
+      &lt;h5 class="mb-1"&gt;Cabeçalho do item&lt;/h5&gt;
+      &lt;small class="text-muted"&gt;3 dias atrás&lt;/small&gt;
+    &lt;/div&gt;
+    &lt;p class="mb-1"&gt;Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.&lt;/p&gt;
+    &lt;small class="text-muted"&gt;Donec id elit non mi porta.&lt;>small&gt;
+  &lt;/a&gt;
+  &lt;a href="#" class="list-group-item list-group-item-action flex-column align-items-start"&gt;
+    &lt;div class="d-flex w-100 justify-content-between"&gt;
+      &lt;h5 class="mb-1"&gt;Cabeçalho do item&lt;/h5&gt;
+      &lt;small class="text-muted"&gt;3 dias atrás&lt;/small&gt;
+    &lt;/div&gt;
+    &lt;p class="mb-1"&gt;Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.&lt;/p&gt;
+    &lt;small class="text-muted"&gt;Donec id elit non mi porta.&lt;/small&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+    </code>
+  </pre>
+
+
+    <h2>Comportamento JavaScript</h2>
+    <p>Use o plugin JavaScript tab (inclua-o, individualmente, ou usando o arquivo compilado bootstrap.js) para
+      aprimorar nosso grupo de lista para criar paineis de abas de conteúdo local.</p>
+    <div class="row">
+      <div class="col-4">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
+            href="#lista-home" role="tab" aria-controls="home">Home</a>
+          <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
+            href="#list-profile" role="tab" aria-controls="profile">Perfil</a>
+          <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
+            href="#lista-mensagens" role="tab" aria-controls="messages">Mensagens</a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+            href="#lista-configuracoes" role="tab" aria-controls="settings">Configurações</a>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">...
+          </div>
+          <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+          <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
+          <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+        </div>
+      </div>
+    </div>
+
+<pre class="language-html">
+<code>
+  &lt;div class="row"&gt;
+  &lt;div class="col-4"&gt;
+    &lt;div class="list-group" id="list-tab" role="tablist"&gt;
+      &lt;a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#lista-home" role="tab" aria-controls="home"&gt;Home&lt;/a&gt;
+      &lt;a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"&gt;Perfil&lt;/a&gt;
+      &lt;a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#lista-mensagens" role="tab" aria-controls="messages"&gt;Mensagens&lt;/a&gt;
+      &lt;a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#lista-configuracoes" role="tab" aria-controls="settings"&gt;Configurações&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-8"&gt;
+    &lt;div class="tab-content" id="nav-tabContent"&gt;
+      &lt;div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list"&gt;...&lt;/div&gt;
+      &lt;div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list"&gt;...&lt;/div&gt;
+      &lt;div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"&gt;...&lt;/div&gt;
+      &lt;div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    <h2>via atributos data</h2>
+    <p>Você pode ativar uma nevegação do grupo de lista, sem escrever qualquer JavaScript, simplesmente, especificando
+      data-toggle="list" em um elemento. Use estes atributos data em um .list-group-item.</p>
+
+    <!-- Grupo de lista -->
+    <div class="list-group" id="minhaLista" role="tablist">
+      <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
+      <a class="list-group-item list-group-item-action" data-toggle="list" href="#perfil" role="tab">Perfil</a>
+      <a class="list-group-item list-group-item-action" data-toggle="list" href="#mensagens" role="tab">Mensagens</a>
+      <a class="list-group-item list-group-item-action" data-toggle="list" href="#configuracoes"
+        role="tab">Configurações</a>
+    </div>
+
+    <!-- Painel de abas -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="home" role="tabpanel">...</div>
+      <div class="tab-pane" id="perfil" role="tabpanel">...</div>
+      <div class="tab-pane" id="mensagens" role="tabpanel">...</div>
+      <div class="tab-pane" id="configuracoes" role="tabpanel">...</div>
+    </div>
+
+<pre class="language-html">
+<code>
+  &lt;!-- Grupo de lista --&gt;
+  &lt;div class="list-group" id="minhaLista" role="tablist"&gt;
+    &lt;a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab"&gt;Home&lt;/a&gt;
+    &lt;a class="list-group-item list-group-item-action" data-toggle="list" href="#perfil" role="tab"&gt;Perfil&lt;/a&gt;
+    &lt;a class="list-group-item list-group-item-action" data-toggle="list" href="#mensagens" role="tab"&gt;Mensagens&lt;/a&gt;
+    &lt;a class="list-group-item list-group-item-action" data-toggle="list" href="#configuracoes" role="tab"&gt;Configurações&lt;/a&gt;
+  &lt;/div&gt;
+  
+  <!-- Painel de abas -->
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="home" role="tabpanel"&gt;...&lt;/div&gt;
+    &lt;div class="tab-pane" id="perfil" role="tabpanel"&gt;...&lt;/div&gt;
+    &lt;div class="tab-pane" id="mensagens" role="tabpanel"&gt;...&lt;/div&gt;
+    &lt;div class="tab-pane" id="configuracoes" role="tabpanel"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+
+    <h2>Via JavaScript</h2>
+    <p>Ative uma aba item de lista, via JavaScript (cada item de lista precisa ser ativado, individualmente):</p>
+<pre class="language-html">
+<code>
+  $('#minhaLista a').on('click', function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+    Você pode ativar itens de listas individuais, em diversas maneiras:
+    
+    Copy
+    $('#minhaLista a[href="#perfil"]').tab('show') // Selecione pelo ID da tag
+    $('#minhaLista a:first-child').tab('show') // Seleciona primeira aba
+    $('#minhaLista a:last-child').tab('show') // Seleciona última aba
+    $('#minhaLista a:nth-child(3)').tab('show') // Seleciona terceira aba
+</code>
+</pre>
+
+    <h2>Efeito fade</h2>
+    <p>Para fazer o painel de abas receber o efeito fade in, use .fade em cada .tab-pane. A primeira aba também deve
+      receber .show, para fazer o conteúdo inicial visível.</p>
+
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="home" role="tabpanel">...</div>
+      <div class="tab-pane fade" id="perfil" role="tabpanel">...</div>
+      <div class="tab-pane fade" id="mensagens" role="tabpanel">...</div>
+      <div class="tab-pane fade" id="configuracoes" role="tabpanel">...</div>
+    </div>
+
+<pre class="language-html">
+<code>
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane fade show active" id="home" role="tabpanel"&gt;...&lt;/div&gt;
+    &lt;div class="tab-pane fade" id="perfil" role="tabpanel"&gt;...&lt;/div&gt;
+    &lt;div class="tab-pane fade" id="mensagens" role="tabpanel"&gt;...&lt;/div&gt;
+    &lt;div class="tab-pane fade" id="configuracoes" role="tabpanel"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+
+
+    <h2>Eventos</h2>
+    <p>Quando mostrando uma nova aba, os eventos se acionam na seguinte ordem:</p>
+
+    <p>1. <span class="red">hide.bs.tab</span> (na aba ativa, no momento)</p>
+    <p><span class="red">show.bs.tab</span> (na aba que está para ser exibida)</p>
+    <p><span class="red">hidden.bs.tab</span> (na aba ativa anteriormente, a mesma do evento hide.bs.tab)</p>
+    <p><span class="red">shown.bs.tab</span> (na aba recém ativa, a mesma do evento show.bs.tab)</p>
+    <p>Se nenhuma aba já foi ativada, os eventos hide.bs.tab e hidden.bs.tab não serão mostrados.</p>
+    <div>
+    <table id="tabela">
+      <thead>
+          <tr>
+              <th>Tipo de evento</th>
+              <th>Descrição</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>show.bs.tab</td>
+              <td id="table-p">Este evento é acionado na exibição de aba, mas antes da nova aba ser exibida. Use event.target e event.relatedTarget para atingir a aba ativa e a aba anteriormente ativa, respectivamente.</td>
+          </tr>
+          <tr>
+              <td>shown.bs.tab</td>
+              <td id="table-p">Este evento é acionado na exibição de aba, depois da aba ser mostrada. Use event.target e event.relatedTarget para atingir a aba ativa e a aba anteriormente ativa, respectivamente.</td>
+          </tr>
+          <tr>
+            <td>hide.bs.tab</td>
+            <td id="table-p">Este evento é acionado quando uma nova aba está para ser exibida e a aba anterior está para ser oculta. Use event.target e event.relatedTarget para atingir a aba ativa, no momento, e a próxima aba que está para ser ativa, respectivamente.</td>
+          </tr>
+          <tr>
+            <td>hidden.bs.tab</td>
+            <td id="table-p">Este evento é acionado depois de uma nova aba ser exibida e a aba ativada anteriormente estar escondida. Use event.target e event.relatedTarget para atingir a aba ativa anteriormente e a nova aba ativa, respectivamente.</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+    <div>
+<pre class="language-html">
+<code>
+  $('a[data-toggle="list"]').on('shown.bs.tab', function (e) {
+    e.target // Aba recém ativa
+    e.relatedTarget // Aba ativa anteriorment
+  })
+</code>
+</pre>
+    </div>
+    </article>
+  </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.js"></script>
+  </main>
+</body>
+</html>

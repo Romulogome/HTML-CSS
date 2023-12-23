@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/grupos-botoes.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <ul>
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="">Documentação</a></li>
+                <li><a href="paginas/pagina2.html">Componentes</a></li>
+                <li><a href="/paginas/pagina5.html">Exemplos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <!-- Conteúdo da barra lateral -->
+            <ul>
+                <li><a href="/paginas/pagina2.html">Alertas</a></li>
+                <li><a href="/componentes/cores-de-links.html" ta target="_self">Cores de links</a></li>
+                <li><a href="/componentes/badges.html">Badges</a></li>
+                <li><a href="/componentes/breadcrumb.html">Breadcrumb</a></li>
+                <li><a href="/componentes/botoes.html">Botões</a></li>
+                <li><a href="/componentes/grupos-botoes.html" target="_self">Grupos de botões</a></li>
+                <li><a href="">Cards</a></li>
+                <li><a href="">Carousel</a></li>
+                <li><a href="">Collapse</a></li>
+                <li><a href="">Dropdowns</a></li>
+                <li><a href="">Formulários</a></li>
+                <li><a href="/paginas/pagina3.html">Grupo de input</a></li>
+                <li><a href="/componentes/grupos-lista.html">Grupo de lista</a></li>
+                <li><a href="/componentes/modal.html">Modal</a></li>
+                <li><a href="">Navs</a></li>
+                <li><a href="/componentes/Paginação.html">Paginação</a></li>
+                <li><a href="/componentes/Popovers.html">Popovers</a></li>
+                <li><a href="/componentes/Progress.html">Progress</a></li>
+                <li><a href="/componentes/Scrollspy.html">Scrollspy</a></li>
+                <li><a href="/paginas/pagina4.html">Tooltips</a></li>
+            </ul>
+        </div>
+    <main>
+        
+            <div class="content">
+                <!-- Conteúdo centralizado -->
+                <h1>Grupos de Botões</h1>
+                <p>Agrupe vários botões em uma única linha e tune eles com JavaScript, usando este componente.</p>
+                <h2>Exemplo Básico</h2>
+                <p>Envolva vários botões (que possuem <span class="red">.btn</span>) em um elemento com <span
+                        class="red">.btn-group</span>. Você pode adicionar um comportamento JavaScript opcional de radio
+                    ou checkbox nos botões.</p>
+                <div id="grupos-botoes">
+                    <button type="button" id="esquerda">Esquerda</button>
+                    <button type="button" id="meio">Meio</button>
+                    <button type="button" id="direita">Direita</button>
+                </div>
+                <div>
+<pre class="language-html">
+    <code>
+    &lt;div class="btn-group" role="group" aria-label="Exemplo básico"&gt;
+        &lt;button type="button" class="btn btn-secondary"Esquerda&gt;&lt;/button&gt;
+        &lt;button type="button" class="btn btn-secondary"Meio&gt;&lt;/button&gt;
+        &lt;button type="button" class="btn btn-secondary"Direita&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    </code>
+</pre>
+                </div>
+                <div id="sr-class">
+                    <h2>Certifique-se de usar o role correto e prover uma label</h2>
+                    <p>Para que uma tecnologia assistiva (como leitores de telas) consiga entender que está lidando com
+                        uma série de botões agrupados, um atributo <span class="red">role</span>, apropriado, deve ser
+                        usado. Para grupos de botões, o atributo poder ser <span class="red">role="group"</span>.
+                        Enquanto que toolbars devem usar <span class="red">role="toolbar"</span>.</p>
+                    <p>Além disso, grupos de botões e toolbars devem receber uma label, já que a maioria das tecnologias
+                        assistivas não vão fazer isso, independente da presença do atributo role. Nos exemplos mostrados
+                        aqui, usamos <span class="red">aria-label</span>, mas alternativas como <span
+                            class="red">aria-labelledby</span> também podem serem usadas.</p>
+                </div>
+                <h2>Tollbars</h2>
+                <p>Combine grupos de botões para criar uma toolbar e ter um componente mais complexo. Use classes
+                    utilitárias, sempre que precisar, para espaçar grupos, botões e outras coisas.</p>
+                <div id="toolbars">
+                    <div id="toolbars1">
+                        <button type="button" id="t1" class="botoes-toolbar">1</button>
+                        <button type="button" class="botoes-toolbar">2</button>
+                        <button type="button" class="botoes-toolbar">3</button>
+                        <button type="button" id="t2" class="botoes-toolbar">4</button>
+                    </div>
+                    <div id="toolbars2">
+                        <button type="button" id="t1" class="botoes-toolbar">5</button>
+                        <button type="button" class="botoes-toolbar">6</button>
+                        <button type="button" id="t2" class="botoes-toolbar">7</button>
+                    </div>
+                    <div id="toolbars3">
+                        <button type="button" class="botoes-toolbar">8</button>
+                    </div>
+                </div>
+                <div>
+<pre class="language-html">
+    <code>
+    &lt;div class="btn-toolbar" role="toolbar" aria-label="Toolbar com grupos de botões"&gt;
+&lt;div "btn-group mr-2" role="group" aria-label="Primeiro grupo>&gt;
+    &lt;button type="button" class="btn btn-secondary"&gt;&lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary"&gt;&lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary"&gt;&lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary"&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="btn-group mr-2" role="group" aria-label="Segundo grupo"&gt;
+    &lt;button type="button" class="btn btn-secondary"&gt;&lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary"&gt;&lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary"&gt;&lt;/button&gt;
+&lt;/div&gt;
+    &lt;div class="btn-group" role="group" aria-label="Terceiro grupo"&gt;
+        &lt;button type="button" class="btn btn-secondary"&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+    </code>
+</pre>
+                </div>
+                <p>Sinta-se livre para usar uma mistura de grupos de inputs e botões, em suas toolbars. Similar ao
+                    exemplo acima, você vai precisar de alguns utilitários para espaçar as coisas, provavelmente.</p>
+                <div id="botoes-input">
+                    <div id="input1">
+                        <button type="button" class="input" id="i1">1</button>
+                        <button type="button" class="input">2</button>
+                        <button type="button" class="input">3</button>
+                        <button type="button" class="input" id="i2">4</button>
+                        <input id="meu-input" type="text" class="control" placeholder="Grupo de input"
+                            aria-label="Exemplo de grupo de input" aria-describedby="btnGroupAddon">
+                    </div>
+                    <div id="input2">
+                        <button type="button" class="input" id="i1">1</button>
+                        <button type="button" class="input">2</button>
+                        <button type="button" class="input">3</button>
+                        <button type="button" class="input" id="i2">4</button>
+                        <input id="meu-input" type="text" class="control" placeholder="Grupo de input"
+                            aria-label="Exemplo de grupo de input" aria-describedby="btnGroupAddon" >
+                    </div>
+                    </div>
+                    <div>
+<pre class="language-html">
+    <code>
+    &lt;div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar com grupos de botões"&gt;
+        &lt;div class="btn-group mr-2" role="group" aria-label="Primeiro grupo"&gt;
+            &lt;button type="button" class="btn btn-secondary"&gt;1&lt;/button&gt;
+            &lt;button type="button" class="btn btn-secondary"&gt;2&lt;/button&gt;
+            &lt;button type="button" class="btn btn-secondary>&gt;3&lt;/button&gt;
+            &lt;button type="button" class="btn btn-secondary"&gt;4&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="input-group>&gt;
+            &lt;div class="input-group-prepend>&gt;
+            &lt;div class="input-group-text" id="btnGroupAddon"@&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;input type"text" class="form-control" placeholder="Exemplo de grupo de input" aria-label="Exemplo de grupo de input" aria-describedby="btnGroupAddon&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="btn-toolbar" justify-content-between" role="toolbar" aria-label="Toolbar com grupos de botões"&gt;
+        &lt;div class="btn-group" role="group"aria-label="Primeiro grupo"&gt;
+            &lt;button type="button""btn btn-secondary"&gt;1&lt;/button&gt;
+            &lt;button type="button" class="btn btn-secondary"&gt;2&lt;/button&gt;
+            &lt;button type="button" class="btn btn-secondary"&gt;3&lt;/button&gt;
+            &lt;button type="button" class="btn btn-secondary"&gt;4&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="input-group"&gt;
+            &lt;div class="input-group-prepend"&gt;
+            &lt;div class="input-group-text" id="btnGroupAddon2"@&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;input type="text" class="form-control" placeholder="Exemplo de grupo de input" aria-label="Exemplo de grupo de input"aria-describedby="btnGroupAddon2"&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;  
+    </code>
+</pre>
+                    </div>
+                    <h2>Dimensionamento</h2>
+                    <p>Invés de aplicar classes para dimensionamento em cada botão de um grupo, basta adicionar <span class="red">.btn-group_*</span> para cada <span class="red">.btn-group</span>, incluindo cada um quando aninhar vários grupos.</p>
+                    <div id="grupos-botoes2">
+                        <div id="grande">
+                            <button type="button" id="esquerda-grande">Esquerda</button>
+                            <button type="button" id="meio-grande">Meio</button>
+                            <button type="button" id="direita-grande">Direita</button>
+                        </div>
+                        <div id="medio">
+                            <button type="button" id="esquerda-medio">Esquerda</button>
+                            <button type="button" id="meio-medio">Meio</button>
+                            <button type="button" id="direita-medio">Direita</button>
+                        </div>
+                        <div id="pequeno">
+                            <button type="button" id="esquerda-pequeno">Esquerda</button>
+                            <button type="button" id="meio-pequeno">Meio</button>
+                            <button type="button" id="direita-pequeno">Direita</button>
+                        </div>
+                    </div>
+                    <div>
+<pre class="language-html">
+    <code>
+    &lt;div class="btn-group btn-group-lg" role="group" aria-label="..."&gt;...&lt;/div&gt;
+    &lt;div class="btn-group" role="group" aria-label="..."&gt;...&lt;/div&gt;
+    &lt;div class="btn-group btn-group-sm" role="group" aria-label="..."&gt;...&lt;/div&gt;  
+    </code>
+</pre>
+                    </div>
+                    <h2>Aninhamento</h2>
+                    <p>Coloque um <span class="red">.btn-group</span> dentro de outro <span class="red">.btn-group</span> quando quiser menus dropdowns misturados com vários botões.</p>
+                    <div id="aninhamento">
+                        <div id="botoes-aninhamento">
+                            <button type="button" id="aninhamento-1" class="a1">1</button>
+                            <button type="button" id="aninhamento-2">2</button>
+                            <button type="button" id="aninhamento-3" class="a2">Dropdown</button>
+                        </div>
+                    </div>
+                    <div>
+<pre class="language-html">
+<code>
+    &lt;div class="btn-group" role="group" aria-label="Grupo de botões com dropdown aninhado"&gt;
+        &lt;button type="button" class="btn btn-secondary"&gt;1&lt;/button&gt;
+        &lt;button type="button" class="btn btn-secondary"&gt;2&lt;/button&gt;
+        
+        &lt;div class="btn-group" role="group"&gt;
+            &lt;button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+            Dropdown
+            &lt;/button&gt;
+            &lt;div class="dropdown-menu" aria-labelledby="btnGroupDrop1"&gt;
+            &lt;a class="dropdown-item" href="#"&gt;Link dropdown&lt;/a&gt;
+            &lt;a class="dropdown-item" href="#"&gt;Link dropdown&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code>
+</pre>
+                    </div>
+                    <h2>Variação Vertical</h2>
+                    <p>Série de botões aparecem verticalmente, ao invés de horizontalmente. <strong>Botões dropdowns divididos nesse caso não são suportados</strong></p>
+                    <div id="variacao">
+                        <div id="botoes-variacao">
+                            <button class="v1">Botão</button>
+                        </div>
+                        <div id="botoes-variacao">
+                            <button>Botão</button>
+                        </div>
+                        <div id="botoes-variacao">
+                            <button>Botão</button>
+                        </div>
+                        <div id="botoes-variacao">
+                            <button>Botão</button>
+                        </div>
+                        <div id="botoes-variacao">
+                            <button>Botão</button>
+                        </div>
+                        <div id="botoes-variacao">
+                            <button class="v2">Botão</button>
+                        </div>
+                    </div>
+                    <div id="variacao">
+                        <div id="botoes-variacao">
+                            <button class="v1">Botão</button>
+                        </div>
+                        <div id="botoes-variacao">
+                            <button>Botão</button>
+                        </div>
+                        <div id="botoes-variacao">
+                            <button>Dropdown</button>
+                        </div>
+                        <div id="botoes-variacao">
+                            <button>Botão</button>
+                        </div>
+                        <div id="botoes-variacao">
+                            <button>Botão</button>
+                        </div>
+                        <div id="botoes-variacao">
+                            <button>Dropdown</button>
+                        </div><div id="botoes-variacao">
+                            <button>Dropdown</button>
+                        </div>
+                        <div id="botoes-variacao">
+                            <button class="v2">Dropdown</button>
+                        </div>
+                    </div>
+                    <div>
+<pre class="language-html">
+    <code>
+    &lt;div class="btn-group-vertical"&gt;
+        ...
+    &lt;/div&gt;
+    </code>
+</pre>
+                    </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.js"></script>
+</body>
+</html>

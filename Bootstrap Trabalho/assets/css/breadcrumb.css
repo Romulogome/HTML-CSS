@@ -1,0 +1,96 @@
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#exemplo-breadcrumb {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+#exemplo-breadcrumb p {
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: #b8c0c9;
+    padding: 10px;
+    margin: 5px;
+}
+#breadcrumb {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+}
+#cor-quote{
+    color: purple;
+}
+
+/*Media Querry*/
+@media only screen and (min-width:450px) and (max-width: 600px) {
+    .sidebar{
+        width: 18%;
+        height: 800px;
+    }
+    .sidebar ul,li,a{
+        font-size: 15px;
+    }
+    .sidebar li{
+        font-size: 10px;    
+    }
+    .content{
+        width: 82%;
+    }
+    .container{
+        width: 100%;
+        height: 800px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    p{
+        font-size: 15px;
+    }
+    #breadcrumb #link p,span{
+        word-break: break-all;
+    }
+}
+  
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .sidebar{
+        width: 18%;
+        height: 800px;
+    }
+    .content{
+        width: 82%;
+    }
+    .container{
+        width: 100%;
+        height: 800px;
+    }
+    #breadcrumb #link p,span{
+        word-break: break-all;
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    .sidebar{
+        width: 18%;
+        height: 920px;
+    }
+    .content{
+        width: 82%;
+    }
+    .container{
+        width: 100%;
+        height: 920px;
+    }
+    #breadcrumb #link p,span{
+        word-break: break-all;
+    }
+}

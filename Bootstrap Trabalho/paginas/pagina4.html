@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tooltips</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/Tooltips.css">
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navigation">
+      <ul>
+        <li><a href="/index.html">Início</a></li>
+        <li><a href="">Documentação</a></li>
+        <li><a href="paginas/pagina2.html">Componentes</a></li>
+        <li><a href="/paginas/pagina5.html">Exemplos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="sidebar sidebar-right">
+      <ul>
+        <li><a href="#Tooltips">Tooltips</a></li>
+        <li><a href="#visao">Visão geral</a></li>
+        <li><a href="#Ative_tooltips">Ative tooltips</a></li>
+        <li><a href="#exemplos">Exemplos</a></li>
+        <li><a href="#modo_de_uso">Modo de uso</a></li>
+        <li><a href="#marcacao">Marcação</a></li>
+        <li><a href="#elementos_desativados">Elementos desativados</a></li>
+        <li><a href="#parametros">Parametros</a></li>
+        <li><a href="#metodos">Metodos</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+      </ul>
+    </div>
+    <div class="sidebar sidebar-left">
+      <!-- Conteúdo da barra lateral esquerda -->
+      <ul>
+        <li><a href="/paginas/pagina2.html">Alertas</a></li>
+        <li><a href="/componentes/cores-de-links.html" ta target="_self">Cores de links</a></li>
+        <li><a href="/componentes/badges.html" target="_self">Badges</a></li>
+        <li><a href="/componentes/breadcrumb.html" target="_self">Breadcrumb</a></li>
+        <li><a href="/componentes/botoes.html" target="_self">Botões</a></li>
+        <li><a href="/componentes/grupos-botoes.html" target="_self">Grupos de botões</a></li>
+        <li><a href="">Cards</a></li>
+        <li><a href="">Carousel</a></li>
+        <li><a href="">Collapse</a></li>
+        <li><a href="">Dropdowns</a></li>
+        <li><a href="">Formulários</a></li>
+        <li><a href="/paginas/pagina3.html">Grupo de input</a></li>
+        <li><a href="/componentes/grupos-lista.html">Grupo de lista</a></li>
+        <li><a href="/componentes/modal.html">Modal</a></li>
+        <li><a href="">Navs</a></li>
+        <li><a href="/componentes/Paginação.html">Paginação</a></li>
+        <li><a href="/componentes/Popovers.html">Popovers</a></li>
+        <li><a href="/componentes/Progress.html">Progress</a></li>
+        <li><a href="/componentes/Scrollspy.html">Scrollspy</a></li>
+        <li><a href="/paginas/pagina4.html">Tooltips</a></li>
+      </ul>
+    </div>
+
+
+
+  <main>
+    <div class="content">
+    <article>
+      <h1 id="Tooltips">Tooltips</h1>
+      <p>Documentação e exemplos para criar tooltips Bootstrap personalizados com CSS e JavaScript, usando CSS3 para
+        animações e atributos data para armazenamento local de título.</p>
+    </article>
+    <article>
+      <h2 id="visao">Visão geral</h2>
+      <p>Oquê saber, quando usar o plugin tooltip:
+      <ul>
+        <li>Tooltips dependem da biblioteca externa <span class="Blue">Popper.js</span>, para posicionamento;
+          <ul>
+            <li>Você deve colocar <span class="Blue">Popper.min.js</span> antes do bootstrap.js ou usar <span
+                class="Red">bootstrap.bundle.min.js / bootstrap.bundle.js</span>, os quais já possuem Popper.js.</li>
+          </ul>
+        </li>
+        <li>Se você está montando nosso JavaScript a partir da fonte, vai precisar do <span class="Blue"> util.js</span>
+        </li>
+        <li>Tooltips são opcionais por questões de desempenho, então, <strong>você deve inicializá-lo por conta
+            própria;</strong></li>
+        <li>Tooltips com <span class="Red">title</span> sem valor, nunca serão exibidos;</li>
+        <li>Declare<span class="Red"> container: 'body'</span> para evitar problemas de renderização, em componentes
+          mais complexos (como grupos de botões ou input);</li>
+        <li>Acionar tooltips em elementos ocultos não é possível;</li>
+        <li>Tooltips para elementos <span class="Red">.disabled</span> ou <span class="Red">disabled</span> devem ser
+          acionados em um elemento pai;</li>
+        <li>Quando acionados a partir de âncoras que envolvem várias linhas, tooltips são centralizados;<ul>
+            <li>Use <span class="Red">white-space: nowrap;</span> nos <span class="Red">&lt;a&gt;</span> para evitar
+              este comportamento.</li>
+          </ul>
+        </li>
+        <li>Tooltips devem ser escondidos, antes que seus elementos correspondentes sejam removidos do DOM.</li>
+      </ul>
+      Pegou tudo isso? Perfeito! Vamo ver como isso funciona, em algums exemplos.
+      </p>
+    </article>
+    <section>
+      <h2 id="Ative_tooltips">Ative tooltips, em qualquer lugar.</h2>
+      <p>Uma maneira de inicializar todos tooltips, em uma página, seria selecioná-los por seus atributos <span
+          class="Red">data-toggle</span>:</p>
+      <div>
+<pre class="language-javascript">
+  <code>
+$(function () {
+// Variável destacada de uma cor
+var exemplo = "Variável destacada";
+
+// String destacada de outra cor
+$('[data-toggle="tooltip"]').tooltip();
+});
+  </code>
+</pre>
+      </div>
+    </section>
+    <article>
+      <h2 id="exemplos">Exemplos</h2>
+      <p>Passe o mouse sobre os botões abaixo para ver as quatro direções de tooltip, possíveis: top, right, bottom e
+        left.</p>
+      <div>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top"
+          title="Tooltip na parte superior">
+          Tooltip na parte superior
+        </button>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right"
+          title="Tooltip na direita">
+          Tooltip na direita
+        </button>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom"
+          title="Tooltip na parte inferior">
+          Tooltip na parte inferior
+        </button>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left"
+          title="Tooltip na esquerda">
+          Tooltip na esquerda
+        </button>
+      </div>
+      <div>
+<pre class="language-html">
+<code>
+  &lt;div&gt;
+    &lt;button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip na parte superior"&gt;
+      Tooltip na parte superior
+    &lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip na direita"&gt;
+      Tooltip na direita
+    &lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip na parte inferior"&gt;
+      Tooltip na parte inferior
+    &lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip na esquerda"&gt;
+      Tooltip na esquerda
+    &lt;/button&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+      </div>
+    </article>
+    <article>
+      <p>Ou um exemplo de tooltip que usa HTML, no seu conteúdo.</p>
+      <div>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true"
+          title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+          Tooltip com HTML
+        </button>
+      </div>
+      <div>
+<pre class="language-html">
+<code>
+  &lt;button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="&lt;em&gt;Tooltip&lt;/em&gt; &lt;u&gt;with&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;"&gt;
+    Tooltip com HTML
+  &lt;/button&gt;
+</code>
+</pre>
+      </div>
+    </article>
+    <article>
+      <h2 id="modo_de_uso">Modo de uso</h2>
+      <p>O plugin tooltip gera conteúdo e marcação sob demanda e, por padrão, posiciona tooltips depois de seus
+        elementos acionadores. <br><br>
+
+        Acione o tooltip via JavaScript:</p>
+      <div>
+<pre class="language-javascript">
+<code>
+  $('#exemplo').tooltip(options);
+</code>
+</pre>
+      </div>
+    </article>
+    <div class="EX">
+      <h3>Overflow <span class="Red">auto</span> e <span class="Red">scroll</span></h3>
+      <p>O tooltip tenta, automaticamente, mudar sua posição quando um container pai tem <span class="Red"> overflow:
+          auto</span> ou <span class="Red">overflow: scroll</span> (como acontece em <span
+          class="Red">.table-responsive</span>), mas ainda assim preserva o espaço do posicionalmento original. Para
+        resolver, altere o parâmetro <span class="Red">boundary</span> para qualquer coisa que não o valor padrão
+        ('scrollParent'), como 'window'.</p>
+      <div>
+<pre class="language-javascript">
+<code>
+  $('#example').tooltip({ boundary: 'window' })
+</code>
+</pre>
+      </div>
+    </div>
+    <article>
+      <h2 id="marcacao">Marcação</h2>
+      <p>A marcação necessária para um tooltip só são os atributos <span class="Red">data</span> e <span
+          class="Red">title</span>, no elemento HTML que você deseja ter um tooltip. A marcação gerada de um tooltip é
+        bem simples, mas precisa de posicionamento (definido como <span class="Red">top</span>, por padrão).</p>
+    </article>
+    <div class="EX">
+      <h3>Fazendo tooltips funcionarem para usuários de teclado e tecnologias assistivas</h3>
+      <p>Você só deveria colocar tooltips em elementos HTML que são, tradicionalmente, focáveis com teclado e
+        interativos (como links e campos de formulário). Apesar de elementos HTML genéricos (como &gt;span&lt;) poderem
+        se tornar focáveis, adicionando o atributo <span class="Red">tabindex="0"</span>, isso vai criar potenciais
+        tabulações irritantes e confusas, em elementos não interativos para usuários de teclado. Além disso, a maioria
+        das tecnologias assistivas, atualmente, não transmitem o tooltip, nesta situação. <br><br>
+
+        Além do mais, não dependa só no <span class="Red">hover</span> como acionador para seu tooltip, já que isso vai
+        fazer seus tooltips impossíveis de serem acionados por usuários de teclado.</p>
+    </div>
+    <div>
+<pre class="language-html">
+<code>
+  &lt;!-- HTML a se escrever --&gt;
+  &lt;a href="#" data-toggle="tooltip" title="Some tooltip text!"&gt;Passe o mouse em mim&lt;/a&gt;
+
+  &lt;!-- Marcação gerada, pelo pluguin --&gt;
+  &lt;div class="tooltip bs-tooltip-top" role="tooltip"&gt;
+    &lt;div class="arrow"&gt;&lt;/div&gt;
+    &lt;div class="tooltip-inner"&gt;
+      Algum texto de tooltip
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+    </div>
+    <article>
+      <h2 id="elementos_desativados">Elementos desativados</h2>
+      <p>Elementos com o atributo <span class="Red">disabled</span> não são interativos, significando que usuários não
+        podem focar, clicar ou passar o mouse sobre eles para acionar o tooltip (ou popover). Como uma forma de
+        contornar a situação, você vai querer acionar o tooltip a partir de um elemento pai <span class="Red">
+          &lt;div&gt;</span> ou <span class="Red">&lt;span&gt;</span>, idealmente, fazendo-os serem focáveis com <span
+          class="Red">tabindex="0"</span> e sobrescrever a <span class="Red">pointer-events</span>, no elemento
+        desativado.</p>
+      <div>
+        <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Tooltip em elemento desativado">
+          <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Botão desativado</button>
+        </span>
+      </div>
+      <div class="EX">
+<pre class="language-html">
+<code>
+  &lt;span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Tooltip em elemento desativado"&gt;
+    &lt;button class="btn btn-primary" style="pointer-events: none;" type="button" disabled&gt;Botão desativado&lt;/button&gt;
+  &lt;/span&gt;
+</code>
+</pre>
+      </div>
+    </article>
+    <article>
+      <h2 id="parametros">Parâmetros</h2>
+      <p>Parâmetros podem ser passados via atributos data ou JavaScript. No caso de atributos data, anexe o nome do
+        parâmetro ao prefixo <span class="Red">data-</span>, como em <span class="Red">data-animation=""</span>.</p>
+      <div>
+
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Padrão</th>
+              <th scope="col">Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>animation</td>
+              <td>booleano</td>
+              <td>true</td>
+              <td>Aplica uma transição CSS fade, no tooltip.</td>
+            </tr>
+            <tr>
+              <td>container</td>
+              <td>string | elemento | false</td>
+              <td>false</td>
+              <td>Anexa o tooltip ao elemento específico. Este parâmetro é particularmente útil porque permite
+                posicionar o tooltip no fluxo do documento, perto do elemento gatilho (o que evita que o tooltip flutue
+                para longe do elemento gatilho, no redimensionamento da página). Exemplo: container: 'body'.</td>
+            </tr>
+            <tr>
+              <td>delay</td>
+              <td>number | objeto</td>
+              <td>0</td>
+              <td>Atraso na exibição e ocultação do tooltip, em ms. Não se aplica ao tipo de acionamento manual. Se um
+                número é provido, o atraso é aplicado tanto à exibição quanto à ocultação. A estrutura do objeto é:
+                delay: { "show": 500, "hide": 100 }</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="EX-azul">
+        <h3>Atributos data para tooltips individuais</h3>
+        <p>Parâmetros para tooltips individuais podem, opcionalmente, serem especificados usando atributos data, como
+          mostrado acima.</p>
+      </div>
+    </article>
+    <article>
+      <h2 id="metodos">Métodos</h2>
+      <div class="EX">
+        <h3>Métodos é transições assíncronas</h3>
+        <p>Todos métodos API são <strong>assíncronos</strong> e iniciam a <strong>transição</strong>. Eles retornam ao
+          invocador, assim que a transição é iniciada, mas <strong>que ela finalize</strong>. Além do mais, uma chamada
+          de método em um <strong>componente transicionando é ignorada</strong>.</p>
+      </div>
+    </article>
+    <section>
+      <h4 class="Red">$().tooltip(options)</h4>
+      <p>Anexa um manipulador tooltip, em uma coleção de elementos.</p>
+
+      <h4 class="Red">.tooltip('show')</h4>
+      <p>Revela o tooltip de um elemento. <strong>Retorna ao invocador, antes do tooltip ter sido exibido, de
+          fato</strong> (antes do evento <span class="Red">shown.bs.tooltip</span> ocorrer). Isto é considerado um
+        acionamento “manual” do tooltip. Tooltips com title vazios, nunca são mostrados.
+      </p>
+      <div>
+<pre class="language-javascript">
+<code>
+  $('#elemento').tooltip('hide');
+</code>
+</pre>
+      </div>
+
+      <h4 class="Red">.tooltip('toggle')</h4>
+      <p>Alterna a visibilidade do tooltip de um elemento. <strong>Retorna ao invocador, antes do tooltip ter sido
+          exibido ou oculto, de fato</strong> (antes dos eventos <span class="Red">shown.bs.tooltip e
+          hidden.bs.tooltip</span> ocorrerem). Isto é considerado um acionamento “manual” do tooltip.</p>
+      <div>
+<pre class="language-javascript">
+<code>
+  $('#elemento').tooltip('toggle');
+</code>
+</pre>
+      </div>
+
+      <h4 class="Red">.tooltip('dispose')</h4>
+      <p>Esconde e destrói o tooltip de um elemento. Tooltips que usam delegação (são criadas usando o parâmetro
+        selector) não podem ser, individualmente, destruídos em elementos acionadores descendentes.</p>
+      <div>
+<pre class="language-javascript">
+<code>
+  $('#elemento').tooltip('dispose');
+</code>
+</pre>
+      </div>
+
+      <h4 class="Red">.tooltip('enable')</h4>
+      <p>Dá a habilide de se exibir ao tooltip de um elemento. <strong>Ativado por padrão</strong>.</p>
+      <div>
+<pre class="language-javascript">
+<code>
+  $('#elemento').tooltip('enable');
+</code>
+</pre>
+      </div>
+
+      <h4 class="Red">.tooltip('disable')</h4>
+      <p>Remove a habilidade de se exibir do tooltip de um elemento. O tooltip só será capaz de ser exibido se isto for
+        reativado.</p>
+      <div>
+<pre class="language-javascript">
+<code>
+  $('#elemento').tooltip('disable');
+</code>
+</pre>
+      </div>
+
+      <h4 class="Red">.tooltip('toggleEnabled')</h4>
+      <p>Alterna a capacidade do tooltip de um elemento de ser exibido ou oculto.</p>
+      <div>
+<pre class="language-javascript">
+<code>
+  $('#elemento').tooltip('toggleEnabled');
+</code>
+</pre>
+      </div>
+
+      <h4 class="Red">.tooltip('update')</h4>
+      <p>Atualiza a posição do tooltip de um elemento.</p>
+      <div>
+<pre class="language-javascript">
+<code>
+  $('#elemento').tooltip('update')
+</code>
+</pre>
+      </div>
+
+      <div>
+        <h2 id="eventos">Eventos</h2>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Evento</th>
+              <th scope="col">Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>show.bs.tooltip</td>
+              <td>Este evento é acionado quando o método show é invocado.</td>
+            </tr>
+            <tr>
+              <td>shown.bs.tooltip</td>
+              <td>Este evento é acionado quando o tooltip foi exibido ao usuário (espera as transições CSS finalizarem).
+              </td>
+            </tr>
+            <tr>
+              <td>hide.bs.tooltip</td>
+              <td>Este evento é acionado, imediatamente, quando o método hide é invocado.</td>
+            </tr>
+            <tr>
+              <td>hidden.bs.tooltip</td>
+              <td>Este evento é acionado quando o tooltip acaba de se ocultar do usuário (espera as transições CSS
+                finalizarem).</td>
+            </tr>
+            <tr>
+              <td>inserted.bs.tooltip</td>
+              <td>Este evento é acionado depois do evento show.bs.tooltip, quando o template tooltip foi adicionado ao
+                DOM.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+<pre class="language-javascript">
+<code>
+  $('#meuTooltip').on('hidden.bs.tooltip', function () {
+    // Faça algo, aqui…
+  })
+</code>
+</pre>
+      </div>
+
+    </section>
+  </div>
+  </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.js"></script>
+
+  <script>
+    // Inicialize os tooltips
+    var tooltips = new bootstrap.Tooltip(document.body, {
+      selector: '[data-toggle="tooltip"]',
+      trigger: 'hover'
+    });
+
+  </script>
+
+</body>
+
+</html>

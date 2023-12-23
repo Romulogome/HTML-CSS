@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/breadcrumb.css">
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <ul>
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="">Documentação</a></li>
+                <li><a href="paginas/pagina2.html">Componentes</a></li>
+                <li><a href="/paginas/pagina5.html">Exemplos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <!-- Conteúdo da barra lateral -->
+            <ul>
+                <li><a href="/paginas/pagina2.html">Alertas</a></li> 
+                <li><a href="/componentes/cores-de-links.html" ta target="_self">Cores de links</a></li>
+                <li><a href="/componentes/badges.html" target="_self">Badges</a></li>
+                <li><a href="/componentes/breadcrumb.html" target="_self">Breadcrumb</a></li>
+                <li><a href="/componentes/botoes.html" target="_self">Botões</a></li>
+                <li><a href="/componentes/grupos-botoes.html" target="_self">Grupos de botões</a></li>
+                <li><a href="">Cards</a></li>
+                <li><a href="">Carousel</a></li>
+                <li><a href="">Collapse</a></li>
+                <li><a href="">Dropdowns</a></li>
+                <li><a href="">Formulários</a></li>
+                <li><a href="/paginas/pagina3.html">Grupo de input</a></li>
+                <li><a href="/componentes/grupos-lista.html">Grupo de lista</a></li>
+                <li><a href="/componentes/modal.html">Modal</a></li>
+                <li><a href="">Navs</a></li>
+                <li><a href="/componentes/Paginação.html">Paginação</a></li>
+                <li><a href="/componentes/Popovers.html">Popovers</a></li>
+                <li><a href="/componentes/Progress.html">Progress</a></li>
+                <li><a href="/componentes/Scrollspy.html">Scrollspy</a></li>
+                <li><a href="/paginas/pagina4.html">Tooltips</a></li>
+            </ul>
+        </div>
+    <main>
+        
+                <div class="content">
+                    <!-- Conteúdo centralizado -->
+                    <article>
+                        <h1>Breadcrumb</h1>
+                        <p>Indica a localização da página atual, dentro de uma hierarquia de navegação e, automaticamente, coloca separadores usando CSS.</p>
+                    </article>
+                    <div id="exemplo-breadcrumb">
+                        <p>Home</p>
+                        <p><a href="#">Home</a> / Biblioteca</p>
+                        <p><a href="#">Home</a> / <a href="#">Biblioteca</a> / Dados</p>
+                    </div>
+                    <div>
+<pre class="language-html">
+    <code>
+&lt;nav aria-label="breadcrumb"&gt;
+    &lt;ol class="breadcrumb"&gt;
+        &lt;li class="breadcrumb-item active" aria-current="page"&gt;Home&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;/nav&gt;
+    &lt;nav aria-label="breadcrumb"&gt;
+    &lt;ol class="breadcrumb"&gt;>
+        &lt;li class="breadcrumb-item"&gt; &lt;a href="#" &gt;Home&lt;/a>&lt;/li&gt;
+        &lt;li class="breadcrumb-item active" aria-current="page"&gt;Biblioteca&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;/nav&gt;
+    &lt;nav aria-label="breadcrumb"&gt;
+    &lt;ol class="breadcrumb"&gt;
+        &lt;li class="breadcrumb-item"&lt; a href="#"&gt;Home</a>&lt;/li&gt;
+        &lt;li class="breadcrumb-item"&lt;a href="#"&gt;Biblioteca&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="breadcrumb-item active" aria-current="page"&gt;Dados&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;/nav&gt;
+    </code>
+</pre>
+                    </div>
+                    <h2>Como escolher o separador</h2>
+                    <p>Separadores são, automaticamente, adicionados com CSS usando ::before e content. Você pode escolhê-los, alterando a variável <span class="red">$breadcrumb-divider</span>. A função quote é necessária para gerar as aspas ao redor de uma string, então, se você quer > como um separador, pode usar isso:</p>
+                    <div id="breadcrumb">
+                        <p>$breadcrumb-divider: <span id="cor-quote">quote(<span class="red">">"</span>)</span>;</p>
+                    </div>
+                    <p>Também é possível usar um <strong>ícone SVG base64 embutido</strong>:</p>
+                    <div id="breadcrumb" id="link" class="codigo">
+                        <p>$breadcrumb-divider: <span class="red">url(Dados:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9z<br>dmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0yLjUgMEwxIDEuNSAzLjUgNCAxIDYuNSAyLjUgOGw0LTQtNC00<br>eiIgZmlsbD0iY3VycmVudENvbG9yIi8+PC9zdmc+)</span>;</p>
+                    </div>
+                    <p>O separador pode ser removido definindo o valor de <span class="red">$breadcrumb-divider</span> como <span class="red">none</span>:</p>
+                    <div id="breadcrumb">
+                        <p>$breadcrumb-divider: none;</p>
+                    </div>
+                    <h2>Acessibilidade</h2>
+                    <p>Já que breadcrumbs provém uma navegação, é uma boa ideia adicionar um atributo significativo como <span class="red">aria-label="breadcrumb"</span> para descrever o tipo de navegação provida no elemento <span class="red">&lt;nav&gt;</span>, assim como aplicar um <span class="red">aria-current="page"</span> ao último item para indicar que ele representa a atual página.</p>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.js"></script>
+</body>
+</html>

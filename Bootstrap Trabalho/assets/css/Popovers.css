@@ -1,0 +1,214 @@
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.Red{
+  color: red;
+}
+main{
+  padding-left: 110px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid ;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td:first-child {
+  font-weight: bold;
+}
+
+/*header*/
+ul{
+  list-style-type: none;
+  padding: 5px;
+}
+
+article {
+  margin-bottom: 40px;
+}
+
+h1, h2 {
+  color: #333;
+  text-align: center;
+  margin: 35px;
+
+}
+
+p {
+  color: #555;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  color: #007bff;
+}
+
+.page-link:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.language-html {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 1em;
+  overflow: auto;
+}
+
+/*Sidebar*/
+.sidebar {
+  width: 5%;
+}
+.content{
+    width: 95%;
+}
+.container{
+    width: 100%;
+}
+.sidebar-left,.sidebar-right {
+  position:fixed;
+  top: 80px;
+}
+.sidebar-left {
+  left: 0;
+}
+.sidebar-right {
+  right: 0;
+}
+/*Botão*/
+button{
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 25px;
+  background-color: rgb(114, 0, 114);
+  color: white;
+}
+
+
+/* Media query para telas pequenas (por exemplo, smartphones) */
+@media only screen and (min-width:450px) and (max-width: 600px) {
+  .sidebar {
+    width: 19%;
+    height: 800px;
+  }
+  .content{
+      width: 81%;
+  }
+  .container{
+      width: 100%;
+      height: 800px;
+  }
+  body {
+    font-size: 12px;
+  }
+  tbody,
+  thead,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+  }
+  tr {
+    margin-bottom: 15px;
+  }
+  td {
+    padding: 10px;
+    text-align: left;
+  }
+  body {
+    font-size: 12px;
+  }
+
+  button {
+    width: 100%;
+  }
+  h1{
+    font-size: 30px;
+}
+  h2{
+      font-size: 25px;
+  }
+  p{
+    font-size: 17px;
+    text-align: justify;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .sidebar {
+    width: 12%;
+    height: 800px;
+  }
+  .content{
+      width: 78%;
+  }
+  .container{
+      width: 100%;
+      height: 800px;
+  }
+  body {
+    font-size: 10px;
+  }
+  main{
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+  }
+  tbody,
+  thead,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+  }
+  tr {
+    margin-bottom: 15px;
+  }
+  td {
+    padding: 10px;
+    text-align: left;
+  }
+  button {
+      display: block;
+      margin: 10px;
+  }
+  h1{
+    font-size: 30px;
+}
+  h2{
+      font-size: 25px;
+  }
+  
+}

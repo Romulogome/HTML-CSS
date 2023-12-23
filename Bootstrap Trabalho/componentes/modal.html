@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <ul>
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="">Documentação</a></li>
+                <li><a href="/paginas/pagina2.html">Componentes</a></li>
+                <li><a href="/paginas/pagina5.html">Exemplos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+      <div class="sidebar sidebar-right">
+          <!-- Conteúdo da barra lateral esquerda -->
+          <ul>
+              <li><a href="/paginas/pagina2.html">Alertas</a></li>
+              <li><a href="/componentes/cores-de-links.html" ta target="_self">Cores de links</a></li>
+              <li><a href="/componentes/badges.html" target="_self">Badges</a></li>
+              <li><a href="/componentes/breadcrumb.html" target="_self">Breadcrumb</a></li>
+              <li><a href="/componentes/botoes.html" target="_self">Botões</a></li>
+              <li><a href="/componentes/grupos-botoes.html" target="_self">Grupos de botões</a></li>
+              <li><a href="">Cards</a></li>
+              <li><a href="">Carousel</a></li>
+              <li><a href="">Collapse</a></li>
+              <li><a href="">Dropdowns</a></li>
+              <li><a href="">Formulários</a></li>
+              <li><a href="/paginas/pagina3.html">Grupo de input</a></li>
+              <li><a href="/componentes/grupos-lista.html">Grupo de lista</a></li>
+              <li><a href="/componentes/modal.html">Modal</a></li>
+              <li><a href="">Navs</a></li>
+              <li><a href="/componentes/Paginação.html">Paginação</a></li>
+              <li><a href="/componentes/Popovers.html">Popovers</a></li>
+              <li><a href="/componentes/Progress.html">Progress</a></li>
+              <li><a href="/componentes/Scrollspy.html">Scrollspy</a></li>
+              <li><a href="/paginas/pagina4.html">Tooltips</a></li>
+          </ul>
+      </div>
+    <main>
+            <div class="content">
+                <!-- Conteúdo centralizado -->
+                <article id="grupo-lista">
+                    <h1>Modal</h1>
+                    <p>Use o plugin JavaScript modal para criar diálogos em seu site para notificações e outros tipos de
+                        conteúdos customizados.</p>
+
+
+                    <h2>Como funciona</h2>
+                        <p>Antes de começar a usar o modal Bootstrap, se assegure de ler o seguinte, já que nossas opções de menu mudaram, recentemente.</p>
+                        <ul>
+                          <li>Modals são feitos com HTML, CSS e JavaScript;</li>
+                            <li>Eles são posicionados acima de todas as coisas do documento e removem rolagem do para que o conteúdo do modal role.</li>
+                          <li>Clicar na tela atrás do modal vai fazer com que ele seja fechado, automaticamente;</li>
+                          <li>Bootstrap só suporta uma janela modal, por vez;</li>
+                          <li>Modals aninhados não são suportados, já que acreditamos proporcionarem pobres experiências ou usuário.</li>
+                          <li>Modals usam position: fixed, o que pode ser um pouco chatinha, no que diz a respeito de sua renderização;</li>
+                          <li>Sempre que possível, coloque o HTML do seu modal em uma posição prioritária para evitar potenciais interferências de outros elementos;</li>
+                          <li>Você vai passar por problemas, quando aninhar um .modal com outro elemento fixo.</li>
+                          <li>Mais uma vez, devido a position: fixed, existem alguns problemas sobre o uso de modais em dispositivos móveis;</li>
+                          <li>Veja nossa documentação de suporte a browsers, para mais detalhes.</li>
+                          <li>Dado como HTML5 define suas semânticas, o atributo HTML autofocus não tem efeito em modals Bootstrap.</li>
+                          <li>Para alcançar o mesmo efeito, use algum tipo de JavaScript customizado:</li>
+                        </ul>
+                        <div>
+<pre class="language-html">
+  <code>
+    Copy
+  $('#meuModal').on('shown.bs.modal', function () {
+  $('#meuInput').trigger('focus')
+  })
+  </code>
+</pre>
+                        </div>
+                    <h2>Exemplo </h2>
+
+                    <h2>Componentes modal</h2>
+                    <p>Abaixo, temos um exemplo de modal static (position e display sobrescritos). Pode-se ver o
+                        cabeçalho, corpo (precisa de padding) e footer (opcional) do modal. Nós só pedimos que você crie
+                        cabeçalhos modal com recursos de dispensa, sempre que possível, ou dê outra opção de dispensa ao
+                        usuário.
+                    </p>
+                    <div class="modal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Título do modal</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Texto do corpo do modal, é aqui.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<pre class="language-html">
+<code>
+  &lt;div class="modal" tabindex="-1" role="dialog"&gt;
+    &lt;div class="modal-dialog" role="document"&gt;
+      &lt;div class="modal-content"&gt;
+        &lt;div class="modal-header"&gt;
+          &lt;h5 class="modal-title"&gt;Título do modal&lt;/h5&gt;
+          &lt;button type="button" class="close" data-dismiss="modal" aria-label="Fechar"&gt;
+            &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-body"&gt;
+          &lt;p&gt;Texto do corpo do modal, é aqui.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-footer"&gt;
+          &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Fechar&lt;/button&gt;
+          &lt;button type="button" class="btn btn-primary"&gt;Salvar mudanças&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+
+                    <h2>Demonstração em tempo real</h2>
+                    <p>Veja um exemplo de modal, clicando no botão abaixo. Ele vai deslizar para baixo, enquanto aparece
+                        gradualmente. </p>
+                    <!-- Botão para acionar modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+                        Abrir modal de demonstração
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<pre class="language-html">
+<code>
+<!-- Botão para acionar modal -->
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo"&gt;
+Abrir modal de demonstração
+&lt;/button&gt;
+
+<!-- Modal -->
+&lt;div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog" role="document"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Título do modal&lt;/h5&gt;
+        &lt;button type="button" class="close" data-dismiss="modal" aria-label="Fechar"&gt;
+          &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        ...
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"</span>&gt;Fechar&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;Salvar mudanças&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+                    <h2>Rolando conteúdo longo</h2>
+                    <p>Quando modals são muito longos para a viewport do usuário ou dispositivo, eles possuem rolagem
+                        independente da página. Teste a demo abaixo, para saber de oquê estamos falando.</p>
+
+                    <!-- Botão para acionar modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalLongoExemplo">
+                        Abrir modal de demonstração
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="ModalLongoExemplo" tabindex="-1" role="dialog"
+                        aria-labelledby="TituloModalLongoExemplo" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="TituloModalLongoExemplo">Título do modal</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<pre class="language-html">
+<code>
+<!-- Botão para acionar modal -->
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalLongoExemplo"&gt;
+Abrir modal de demonstração
+&lt;/button&gt;
+
+<!-- Modal -->
+&lt;div class="modal fade" id="ModalLongoExemplo" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog" role="document"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title" id="TituloModalLongoExemplo"</span>&gt;Título do modal&lt;/h5&gt;
+        &lt;button type="button" class="close" data-dismiss="modal" aria-label="Fechar"&gt;
+          &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        ...
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Fechar&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;Salvar mudanças&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div
+</code>
+</pre>
+
+                    <h2>Verticalmente centralizado</h2>
+                    <p>Use .modal-dialog-centered no .modal-dialog para, verticalmente, centralizar o modal.</p>
+
+                    <!-- Botão para acionar modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target="#ExemploModalCentralizado">
+                        Abrir modal de demonstração
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog"
+                        aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<pre class="language-html">
+<code>
+  &lt;!-- Botão para acionar modal --&gt;
+  &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado"&gt;
+    Abrir modal de demonstração
+  &lt;/button&gt;
+  
+  &lt;!-- Modal --&gt;
+  &lt;div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true"&gt;
+    &lt;div class="modal-dialog modal-dialog-centered" role="document"&gt;
+      &lt;div class="modal-content"&gt;
+        &lt;div class="modal-header"&gt;
+          &lt;h5 class="modal-title" id="TituloModalCentralizado"&gt;Título do modal&lt;/h5&gt;
+          &lt;button type="button" class="close" data-dismiss="modal" aria-label="Fechar"&gt;
+            &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-body"&gt;
+          ...
+        &lt;/div&gt;
+        &lt;div class="modal-footer"&gt;
+          &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Fechar&lt;/button&gt;
+          &lt;button type="button" class="btn btn-primary"&gt;Salvar mudanças&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+
+
+                    <h2>Tooltips e popovers</h2>
+                    <p>Tooltips e popovers podem ser posicionados dentro de modals, sempre que necessário. Quando modals
+                        são fechados, qualquer tooltip ou popover dentro deles e fechado, automaticamente.</p>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                        <li class="list-group-item">Porta ac consectetur ac</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+<pre class="language-html">
+<code>
+    &lt;div class="modal-body"&gt;
+    &lt;h5&gt;Popover em um modal&lt;/h5&gt;
+    &lt;p&gt;Este &lt;a href="#" role="button" class="btn btn-secondary popover-test" title="Título do popover" data-content="O conteúdo do popover é definido aqui."&gt;botão&lt;/a&gt; aciona um popover, ao clicar nele.&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;h5&gt;Tooltips em um modal&lt;/h5&gt;
+    &lt;p&gt;&lt;a href="#" class="tooltip-test" title="Tooltip"&gt;Este link&lt;/a&gt; e &lt;a href="#" class="tooltip-test" title="Tooltip"&gt;este outro&lt;/a&gt; mostra tooltips, quando passamos o mouse sobre eles.&lt;/p&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+
+                    <h2>Usando o grid</h2>
+
+                    <p>Use o sistema grid Bootstrap dentro de um modal, aninhando .container-fluid no .modal-body.
+                        Depois, use as classes do sistema grid, assim como faria em outros locais.</p>
+
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-4">.col-md-4</div>
+                                <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 ml-auto">.col-md-3 .ml-auto</div>
+                                <div class="col-md-2 ml-auto">.col-md-2 .ml-auto</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 ml-auto">.col-md-6 .ml-auto</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-9">
+                                    Level 1: .col-sm-9
+                                    <div class="row">
+                                        <div class="col-8 col-sm-6">
+                                            Level 2: .col-8 .col-sm-6
+                                        </div>
+                                        <div class="col-4 col-sm-6">
+                                            Level 2: .col-4 .col-sm-6
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<pre class="language-html"> 
+<code>
+  &lt;div class="modal-body"&gt;
+    &lt;div class="container-fluid"&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+        &lt;div class="col-md-4 ml-auto"&gt;.col-md-4 .ml-auto&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-md-3 ml-auto"&gt;.col-md-3 .ml-auto&lt;/div&gt;
+        &lt;div class="col-md-2 ml-auto"&gt;.col-md-2 .ml-auto&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-md-6 ml-auto"&gt;.col-md-6 .ml-auto&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-sm-9"&gt;
+          Level 1: .col-sm-9
+          &lt;div class="row"&gt;
+            &lt;div class="col-8 col-sm-6"&gt;
+              Level 2: .col-8 .col-sm-6
+            &lt;/div&gt;
+            &lt;div class="col-4 col-sm-6"&gt;
+              Level 2: .col-4 .col-sm-6
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+
+
+
+                    <h2>Variando o conteúdo de modais</h2>
+                    <p>Tem vários botões que acionam o mesmo modal, mas com o conteúdo um pouco diferente? Use
+                        event.relatedTarget e atributos HTML data-* (via jQuery, se possível) para variar o conteúdo do
+                        modal, dependendo de qual botão foi clicado.
+
+                        Abaixo, temos uma demonstração seguida de um exemplo HTML e JavaScript. Para mais informação,
+                        leia a documentação de eventos do modal para detalhes sobre relatedTarget.</p>
+
+
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="@mdo">Falar com @mdo</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="@fat">Falar com @fat</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="@getbootstrap">Falar com @getbootstrap</button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Nova mensagem</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Destinatário:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Mensagem:</label>
+                                            <textarea class="form-control" id="message-text"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+<pre class="language-html">
+<code>
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"&gt;Falar com @mdo&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat"&gt;Falar com @fat&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"&gt;Falar com @getbootstrap&lt;/button&gt;
+
+&lt;div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog" role="document"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Nova mensagem&lt;/h5&gt;
+        &lt;button type="button" class="close" data-dismiss="modal" aria-label="Fechar"&gt;
+          &lt;span aria-hidden="true">&times;
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        &lt;form&gt;
+          &lt;div class="form-group"&gt;
+            &lt;label for="recipient-name" class="col-form-label"&gt;Destinatário:&lt;/label&gt;
+            &lt;input type="text" class="form-control" id="recipient-name"&gt;
+          &lt;/div>
+          &lt;div class="form-group"&gt;
+            &lt;label for="message-text" class="col-form-label"&gt;Mensagem:&lt;/label&gt;
+            &lt;textarea class="form-control" id="message-text"&gt;&lt;/textarea&gt;
+          &lt;/div>
+        &lt;/form>
+      &lt;/div>
+      &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&lt;Enviar&lt;/button&gt;
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+</code>
+</pre>
+
+                    <h2>Remover animação</h2>
+                    <p>Para modals que, simplesmente, aparecem de supetão, invés de gradualmente, remova a classe .fade da marcação do seu modal.</p>
+<pre class="language-html">
+<code>
+  &lt;div class="modal" tabindex="-1" role="dialog" aria-labelledby="..." aria-hidden="true">
+    ...
+  &lt;/div>
+</code>
+</pre>
+
+
+                    <h2>Alturas dinâmicas</h2>
+                    <p>Se a altura do modal muda enquanto é aberta, você deveria invocar
+                        $('#meuModal').modal('handleUpdate') para reajustar a posição do modal, caso a barra de rolagem
+                        apareça.</p>
+
+
+                    <h2>Acessibilidade</h2>
+                    <p>Se assegure de usar role="dialog" e aria-labelledby="...", remetendo o título do modal ao .modal
+                        e role="document" ao .modal-dialog. Alternativamente, você pode dar uma descrição do seu modal,
+                        no aria-describedby do .modal.</p>
+
+
+
+                    <h2>Embutindo vídeos do YouTube</h2>
+                    <p>Embutir vídeos do YouTube em modals pede JavaScript adicional, para parar o playback e outras
+                        coisas, automaticamente. Veja este ótimo post, no Stack Overflow, para mais informação.</p>
+
+                    <h2>Tamanhos opcionais</h2>
+                    <p>Modals possuem três tamanhos alternativos, disponíveis via classes modificadoras e a serem
+                        colocadas em um .modal-dialog. Estes tamanhos são cancelados, em certos breakpoints, para evitar
+                        rolagem horizontal em viewports menores.</p>
+                    <!-- Modal extra grande -->
+                    <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Modal extra
+                        grande</button>
+
+                    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog"
+                        aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal grande -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target=".bd-example-modal-lg">Modal grande</button>
+
+                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+                        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal pequeno -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target=".bd-example-modal-sm">Modal pequeno</button>
+
+                    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog"
+                        aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+<pre class="language-html">
+<code>
+<!-- Modal extra grande -->
+&lt;button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Modal extra grande&lt;/button>
+
+&lt;div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  &lt;div class="modal-dialog modal-xl">
+    &lt;div class="modal-content">
+      ...
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+
+<!-- Modal grande -->
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Modal grande&lt;/button>
+
+&lt;div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  &lt;div class="modal-dialog modal-lg">
+    &lt;div class="modal-content">
+      ...
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+
+<!-- Modal pequeno -->
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Modal pequeno&lt;/button>
+
+&lt;div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  &lt;div class="modal-dialog modal-sm">
+    &lt;div class="modal-content">
+      ...
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+</code>
+</pre>
+
+
+                    <h2>Eventos</h2>
+
+                    Quando mostrando uma nova aba, os eventos se acionam na seguinte ordem:
+
+                    hide.bs.tab (na aba ativa, no momento)
+                    show.bs.tab (na aba que está para ser exibida)
+                    hidden.bs.tab (na aba ativa anteriormente, a mesma do evento hide.bs.tab)
+                    shown.bs.tab (na aba recém ativa, a mesma do evento show.bs.tab)
+                    Se nenhuma aba já foi ativada, os eventos hide.bs.tab e hidden.bs.tab não serão mostrados.
+
+                    Tipo de evento Descrição
+                    show.bs.tab Este evento é acionado na exibição de aba, mas antes da nova aba ser exibida. Use
+                    event.target e event.relatedTarget para atingir a aba ativa e a aba anteriormente ativa,
+                    respectivamente.
+                    shown.bs.tab Este evento é acionado na exibição de aba, depois da aba ser mostrada. Use event.target
+                    e event.relatedTarget para atingir a aba ativa e a aba anteriormente ativa, respectivamente.
+                    hide.bs.tab Este evento é acionado quando uma nova aba está para ser exibida e a aba anterior está
+                    para ser oculta. Use event.target e event.relatedTarget para atingir a aba ativa, no momento, e a
+                    próxima aba que está para ser ativa, respectivamente.
+                    hidden.bs.tab Este evento é acionado depois de uma nova aba ser exibida e a aba ativada
+                    anteriormente estar escondida. Use event.target e event.relatedTarget para atingir a aba ativa
+                    anteriormente e a nova aba ativa, respectivamente.Copy
+                    $('a[data-toggle="list"]').on('shown.bs.tab', function (e) {
+                    e.target // Aba recém ativa
+                    e.relatedTarget // Aba ativa anteriorment
+                    })
+
+                </article>
+                <footer class="rodape">
+                    <nav>
+                        <ul>
+                            <li><a href="https://github.com/" target="_blank">Github</a></li>
+                            <li><a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D"
+                                    target="_blank">Twitter</a></li>
+                            <li><a href="">Sobre</a></li>
+                        </ul>
+                        <p>“Copyright &copy; 2023 .Todos os direitos reservados.”
+                        <p>
+                    </nav>
+                </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.js"></script>
+</body>
+</html>

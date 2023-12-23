@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/botoes.css">
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <ul>
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="">Documentação</a></li>
+                <li><a href="paginas/pagina2.html">Componentes</a></li>
+                <li><a href="/paginas/pagina5.html">Exemplos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <!-- Conteúdo da barra lateral esquerda -->
+            <ul>
+                <li><a href="/paginas/pagina2.html">Alertas</a></li> 
+                <li><a href="/componentes/cores-de-links.html" ta target="_self">Cores de links</a></li>
+                <li><a href="/componentes/badges.html" target="_self">Badges</a></li>
+                <li><a href="/componentes/breadcrumb.html" target="_self">Breadcrumb</a></li>
+                <li><a href="/componentes/botoes.html" target="_self">Botões</a></li>
+                <li><a href="/componentes/grupos-botoes.html" target="_self">Grupos de botões</a></li>
+                <li><a href="">Cards</a></li>
+                <li><a href="">Carousel</a></li>
+                <li><a href="">Collapse</a></li>
+                <li><a href="">Dropdowns</a></li>
+                <li><a href="">Formulários</a></li>
+                <li><a href="/paginas/pagina3.html">Grupo de input</a></li>
+                <li><a href="/componentes/grupos-lista.html">Grupo de lista</a></li>
+                <li><a href="/componentes/modal.html">Modal</a></li>
+                <li><a href="">Navs</a></li>
+                <li><a href="/componentes/Paginação.html">Paginação</a></li>
+                <li><a href="/componentes/Popovers.html">Popovers</a></li>
+                <li><a href="/componentes/Progress.html">Progress</a></li>
+                <li><a href="/componentes/Scrollspy.html">Scrollspy</a></li>
+                <li><a href="/paginas/pagina4.html">Tooltips</a></li>
+            </ul>
+        </div>
+    <main>
+        
+            <div class="content">
+                <!-- Conteúdo centralizado -->
+                <article>
+                    <h1>Botões</h1>
+                    <p>Use os botões Bootstrap personalizados para ações em formulários, diálogos e outras coisas. Lembrando que esse componente tem suporte a escolha de tamanhos, estados e muito mais.</p>
+                    <h2>Exemplos</h2>
+                    <p>Bootstrap possui vários estilos de botões pré-definidos, cada um com seu próprosito semântico e outros recursos extras para mais controle.</p>
+                </article>
+                <div id="box-botoes">
+                    <button type="button" id="botoes1" class="cor">Primary</button>
+                    <button type="button" id="botoes2" class="cor">Secondary</button>
+                    <button type="button" id="botoes3" class="cor">Sucess</button>
+                    <button type="button" id="botoes4" class="cor">Danger</button>
+                    <button type="button" id="botoes5" class="cor">Warning</button>
+                    <button type="button" id="botoes6" class="cor">Info</button>
+                    <button type="button" id="botoes7" class="cor">Light</button>
+                    <button type="button" id="botoes8" class="cor">Dark</button>
+                    <button type="button" id="botoes9" class="cor"><a href="#">Link</a></button>
+                </div>
+                <div class="codigo">
+<pre class="language-html">
+    <code>
+    &lt;button type="button" class="btn btn-primary"</span></span>&gt;Primary&lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary"</span></span>&gt;Secondary&lt;/button&gt;
+    &lt;button type="button" class="btn btn-success"</span></span>&gt;Success&lt;/button&gt;
+    &lt;button type="button" class="btn btn-danger"</span></span>&gt;Danger&lt;/button&gt;
+    &lt;button type="button" class="btn btn-warning"</span></span>&gt;Warning&lt;/button&gt;
+    &lt;button type="button" class="btn btn-info"</span></span> &gt;Info&lt;/button&gt;
+    &lt;button type="button" class="btn btn-light"</span></span>&gt;Light&lt;/button&gt;
+    &lt;button type="button" class="btn btn-dark"&gt;Dark&lt;/button&gt;
+    &lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt
+    </code>
+</pre>
+                </div>
+                <div id="sr-class">
+                    <h2>Transmitindo significado a tecnologias assistivas</h2>
+                    <p>Usando cor para adicionar significado só fornece uma indicação visual, a qual não será transmitida para usuários de tecnologias assistivas (como leitores de telas). Se assegure que a informação denotada pela cor é tanto destacada do conteúdo (ex: o texto visível) ou está incluída em meios alternativos, como textos extras escondidos com a classe <span>.sr-class.</span></p>
+                </div>
+                <h2>Button tags</h2>
+                <p>A classe <span class="red">.btn</span> foi desenhada para ser usada com o elemento <span class="red">&lt;button&gt;</span>. No entanto, você também pode usar esta classe nos elementos <span class="red">&lt;a&gt;</span> ou <span class="red">&lt;input&gt;</span> apesar de alguns browser aplicarem um visual um pouco diferente.</p>
+                <p>Quando usando classes de botão em elementos <span class="red">&lt;a&gt;</span> que funcionam como gatilhos in-page (igual aos conteúdos colapsáveis), invés de link para novas páginas ou seções dentro da página atual, estas âncoras devem receber <span class="red">role="button"</span> para expliciar seu propósito a tecnologias assistivas, como leitores de telas.</p>
+                <div id="botoes-click">
+                    <p class="botoes-tags" class="ativo">Link</p>
+                    <p class="botoes-tags" class="ativo">Botão</p>
+                    <p class="botoes-tags" class="ativo">Input</p>
+                    <p class="botoes-tags" class="ativo">Submit</p>
+                    <p class="botoes-tags" class="ativo">Reset</p>
+                </div>
+                <div class="codigo">
+<pre class="language-html">
+    <code>
+    &lt;a class="btn btn-primary" href="#" role="button"&gt;Link&lt;/a&gt;
+    &lt;button class="btn btn-primary" type="submit"&gt;Botão&lt;/button&gt;
+    &lt;input class="btn btn-primary" type="button" value="Input"&gt;
+    &lt;input class="btn btn-primary" type="submit" value="Submit"&gt;
+    &lt;input class="btn btn-primary" type="reset" value="Reset"&gt;
+    </code>
+</pre>
+                </div>
+                <h2>Botões outline</h2>
+                <p>Precisa de um botão, mas sem cor de backround? Substitua as classes modificadoras padrões pelas <span class="red">.btn-outline-*</span> que removem todas as imagens de background e cores, em qualquer botão.</p>
+                <div id="box-outline">
+                    <button type="button" id="outline1" class="cor-outline">Primary</button>
+                    <button type="button" id="outline2" class="cor-outline">Secondary</button>
+                    <button id="outline3" class="cor-outline">Sucess</button>
+                    <button type="button" id="outline4" class="cor-outline">Danger</button>
+                    <button type="button" id="outline5" class="cor-outline">Warning</button>
+                    <button type="button" id="outline6" class="cor-outline">Info</button>
+                    <button type="button" id="outline7" class="cor">Light</button>
+                    <button type="button" id="outline8" class="cor-outline">Dark</button>
+                </div>
+                <div class="codigo">
+<pre class="language-html">
+    <code>
+    &lt;button type="button" class="btn btn-outline-primary"&gt;Primary&lt;/button&gt;
+    &lt;button type="button" class="btn btn-outline-secondary"&gt;Secondary&lt;/button&gt;
+    &lt;button type="button" class="btn btn-outline-success"&gt;Success&lt;/button&gt;
+    &lt;button type="button" class="btn btn-outline-danger"&gt;Danger&lt;/button&gt;
+    &lt;button type="button" class="btn btn-outline-warning"&gt;Warning&lt;/button&gt;
+    &lt;button type="button" class="btn btn-outline-info"&gt;Info&lt;/button&gt;
+    &lt;button type="button" class="btn btn-outline-light"&gt;Light&lt;/button&gt;
+    &lt;button type="button" class="btn btn-outline-dark"&gt;Dark&lt;/button&gt;
+    </code>
+</pre>
+                    </div>
+                    <h2>Tamanhos</h2>
+                    <p>Botões grandes ou pequenos? Use <span class="red">.btn-lg</span> ou <span class="red">.btn-sm</span> para tamanhos alternativos ao padrão.</p>
+                    <div id="botoes-tamanho">
+                        <button type="button" id="tamanho-azul">Botão Grande</button>
+                        <button type="button" id="tamanho-cinza">Botão Grande</button>
+                    </div>
+                    <div class="codigo">
+<pre class="language-html">
+    <code>
+    &lt;button type="button" class="btn btn-primary btn-lg"&gt;Botão grande&lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary btn-lg"&gt;Botão grande&lt;/button&gt;
+    </code>
+</pre>
+                    </div>
+                    <div id="botoes-tamanho">
+                        <button type="button" id="tamanho-azul-pequeno">Botão Pequeno</button>
+                        <button type="button" id="tamanho-cinza-pequeno">Botão Pequeno</button>
+                    </div>
+                    <div class="codigo">
+<pre class="language-html">
+    <code>
+    &lt;button type="button" class="btn btn-primary btn-sm"d&gt;Botão pequeno&lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary btn-sm"d&gt;Botão pequeno&lt;/button&gt;
+    </code>
+</pre>
+                    </div>
+                    <p>Crie botões block-level (ocupam toda a largura do elemento pai), usando a classe <span class="red">.btn-block</span>.</p>
+                    <div id="botoes-tamanho-grande">
+                        <button type="button" id="tamanho-azul-grande">Botão Block-Level</button>
+                        <button type="button" id="tamanho-cinza-grande">Botão Block-Level</button>
+                    </div>
+                    <div class="codigo">
+<pre class="language-html">
+    <code>
+    &lt;button type="button" class="btn btn-primary btn-lg btn-block"&gt;Botão Block-Level&lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary btn-lg btn-block"&gt;Botão Block-Level&lt;/button&gt;
+    </code>
+</pre>
+                    </div>
+                    <h2>Estado Ativo</h2>
+                    <p>Os botões parecem pressionados (background, borda e sombra internas mais escuras), quando estão em estado ativo.<strong>Não há necessidade de usar a classe no</strong> <span class="red">&lt;button&gt;</span>, <strong>porque eles usam uma pseudo-classe</strong>. No entanto, você ainda pode forçar a aparência de estado ativo com a classe <span class="red">.active</span> e incuir o atributo <span class="red">aria-pressed="true"</span>, se precisar.</p>
+                    <div id="link">
+                        <button type="button" id="link1">Link Primário</button>
+                        <button type="button" id="link2">Link</button>
+                    </div>
+                    <div class="codigo">
+<pre class="language-html">
+    <code>
+    &lt;a href="#" class="btn btn-primary btn-lg active" <span class="blue">role="button" aria-pressed="true"&gt;Link primário&lt;/a&gt;
+    &lt;a href="#" class="btn btn-secondary btn-lg active role="button" aria-pressed="true"&gt;Link&lt;/a&gt;
+</pre>
+                    </div>
+                    <h2>Estado Desativado</h2>
+                    <p>Faça botões parecerem inativos, usando o atributo booleano disabled em qualquer elemento <span class="red">&lt;button&gt;</span>.</p>
+                    <div id="link">
+                        <button type="button" id="botao-disable1" disabled>Botão Primário</button>
+                        <button type="button" id="botao-disable2" disabled>Botão</button>
+                    </div>
+                    <div class="codigo">
+<pre class="language-html">
+    <code>
+    &lt;button type="button" class="btn btn-lg btn-primary" disabled</span>&gt;Botão primário&lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary btn-lg" disabled&gt;Botão&lt;/button&gt;
+    </code>
+</pre>
+                    </div>
+                    <p>Botões desativados usando o elemento <a> se comportam um pouco diferente:</p>
+                        <ul id="desativado">
+                            <li>O elemento <span class="red">&lt;a&gt;</span> não suport o atributo <span class="red">disabled</span>, então, você deve usar a classe <span class="red">.disabled</span> para fazê-lo parecer desativado, visualmente;</li>
+                            <li>Alguns estilos (que ainda não são bem suportados) são usados para desativarem todos os <span class="red">pointer-events</span>, em botões âncora;</li>
+                            <li id="desativado2">Em browsers que suportam essa propriedade, você não verá o cursor desativado.</li>
+                            <li>Botões desativados devem ter o atributo <span class="red">aria-disabled="true"</span> para indicar o estado do elemento para tecnologias assistivas.</li>
+                        </ul>
+                        <div id="link">
+                            <button type="button" id="botao-disable1" disabled>Botão Primário</button>
+                            <button type="button" id="botao-disable2" disabled>Botão</button>
+                        </div>
+                        <div class="codigo">
+<pre class="language-html">
+    <code>
+    &lt;a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true"&gt;Link primário&lt;/a&gt;
+    &lt;a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true"&gt;Link&lt;/a&gt;
+    </code>
+</pre>
+                        </div>
+                        <div id="sr-class">
+                            <h2>Problemas com funcionalidade de link</h2>
+                            <p>A class <span class="red">disabled</span>. usa <span class="red">pointer-events: none</span> para tentar desativar a funcionalidade de link do <span class="red">&lt;a&gt;</span>, mas esta propriedade CSS ainda não foi padronizada. Além disso, até em navegadores que suportam <span class="red">pointer-events: none</span>, a navegação por teclado continua inatingida, significando que tanto usuários com ou sem tecnologias assistivas ainda conseguirão ativar estes links. Portanto, para evitar isso, use o atributo <span class="red">tabindex="-1" </span>(evita que tenham foco) nestes links e use seu próprio JavaScript para desativar as funcionalidades.</p>
+                        </div>
+                        <h2>Plugin de Botão</h2>
+                        <p>Faça mais com botões. Controle estados ou crie grupos de botões, para mais componentes como toolbars.</p>
+                        <h2>Alternar estados</h2>
+                        <p>Use <span class="red">data-toggle="button"</span> para alternar o estado <span class="red">ativo</span> do botão. Se você pré-ativar o botão, deve usar a classe <span class="red">.active</span> e o atributo <span class="red">aria-pressed="true"</span>, no <span class="red">&lt;button&gt;</span>.</p>
+                        <div id="link">
+                            <button type="button" id="tamanho-azul">Única alternância</button>
+                        </div>
+                        <div class="codigo">
+<pre class="language-html">
+<code>
+    &lt;button <span class="blue">type=<span class="red">"button"</span></span> <span class="blue">class=<span class="red">"btn btn-primary"</span></span> <span class="blue">data-toggle=<span class="red">"button"</span></span> <span class="blue">aria-pressed=<span class="red">"false"</span></span> <span class="blue">autocomplete=<span class="red">"off"</span></span>&gt;
+        Única alternância
+    &lt;/button&gt;
+</code>
+</pre>
+                        </div>
+                        <h2>Botôes Checkbox e Radio</h2>
+                        <p>Os estilos do <span class="red">button</span>. Bootstrap podem seren usado em outros elementos, como <span class="red">&lt;label&gt;</span> para se ter um botão no estilo checkbox ou radio com alternância. Use <span class="red">data-toggle="buttons"</span> em um .<span class="red">btn-group</span> para estilizar o os <span class="red">inputs</span> dentro de seus botões.<strong>Perceba que você pode criar botões com apenas um input ou grupos deles</strong>.</p>
+                        <p>O estado checado destes botões <strong>só é atualizado através do evento de clique</strong>, no botão. Se você usar outro método para atualizar o input (ex: <span class="red">&lt;input type="reset"&gt;</span> ou aplicando a propriedade <span class="red">checked</span>, manualmente), vai precisar anternar a classe .<span class="red">active</span> da <span class="red">&lt;label&gt;</span>, manualmente.</p>
+                        <p>Note que botões pré-checados requerem que você coloque a classe .active, manualmente, no input do <span class="red">&lt;label&gt;</span>.</p>
+                        <div id="checkbox">
+                            <button type="button" id="check">Checado</button>
+                        </div>
+                        <div class="codigo">
+<pre class="language-html">
+<code>
+    &lt;div class="btn-group-toggle" data-toggle="buttons"&gt;
+    &lt;label class="btn btn-secondary active"&gt;
+        &lt;input type="checkbox" checked autocomplete="off" &gt; Checado
+    &lt;/label&gt;
+    &lt;/div&gt;
+</code>
+</pre>
+        </div>
+        <div id="checkbox">
+            <button type="button" id="radio1">Ativo</button>
+            <button type="button" id="radio2">Radio</button>
+            <button type="button" id="radio3">Radio</button>
+        </div>
+        <div class="codigo">
+<pre class="language-html">
+    <code>
+    &lt;div class="btn-group btn-group-toggle" data-toggle="buttons"&gt;
+    &lt;label class="btn btn-secondary active"&gt;
+        &lt;input type="radio" name="options" id="option1" autocomplete="off" checked&gt; Ativo
+        &lt;input type="radio" name="options" id="option1" autocomplete="off" checked&gt; Ativo
+    &lt;/label&gt;
+    &lt;label class="btn btn-secondary"&gt;
+        &lt;input type="radio" name="options" id="option2" autocomplete="off"&gt; Radio
+    &lt;/label&gt;
+    &lt;label class="btn btn-secondary"&gt;
+        &lt;input type="radio" name="options" id="option3" autocomplete="off"&gt; Radio
+    &lt;/label&gt;
+    &lt;/div&gt;
+</pre>
+                        </div>
+                        <h2>Métodos</h2>
+                        <table id="tabela">
+                            <thead>
+                                <tr>
+                                    <th>Método</th>
+                                    <th>Descrição</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="red">$().button('toggle')</span></td>
+                                    <td id="table-p">Alterna o estado. Dá ao botão uma aparência como se estivesse ativado.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="red">$().button('dispose')</span></td>
+                                    <td id="table-p">Destroi o botão de um elemento.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+            </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.js"></script>
+        </body>
+        </html>

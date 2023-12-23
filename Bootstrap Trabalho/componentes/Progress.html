@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/Progress.css">
+<body>
+  <header>
+    <nav class="navigation">
+        <ul>
+            <li><a href="/index.html">Início</a></li>
+            <li><a href="">Documentação</a></li>
+            <li><a href="paginas/pagina2.html">Componentes</a></li>
+            <li><a href="/paginas/pagina5.html">Exemplos</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+<div class="sidebar sidebar-left">
+  <!-- Conteúdo da barra lateral esquerda -->
+  <ul>
+      <li><a href="/paginas/pagina2.html">Alertas</a></li>
+      <li><a href="/componentes/cores-de-links.html">Cores de links</a></li>
+      <li><a href="/componentes/badges.html" >Badges</a></li>
+      <li><a href="/componentes/breadcrumb.html">Breadcrumb</a></li>
+      <li><a href="/componentes/botoes.html">Botões</a></li>
+      <li><a href="/componentes/grupos-botoes.html">Grupos de botões</a></li>
+      <li><a href="">Cards</a></li>
+      <li><a href="">Carousel</a></li>
+      <li><a href="">Collapse</a></li>
+      <li><a href="">Dropdowns</a></li>
+      <li><a href="">Formulários</a></li>
+      <li><a href="/paginas/pagina3.html">Grupo de input</a></li>
+      <li><a href="/componentes/grupos-lista.html">Grupo de lista</a></li>
+      <li><a href="/componentes/modal.html">Modal</a></li>
+      <li><a href="">Navs</a></li>
+      <li><a href="/componentes/Paginação.html">Paginação</a></li>
+      <li><a href="/componentes/Popovers.html">Popovers</a></li>
+      <li><a href="/componentes/Progress.html">Progress</a></li>
+      <li><a href="/componentes/Scrollspy.html">Scrollspy</a></li>
+      <li><a href="/paginas/pagina4.html">Tooltips</a></li>
+  </ul>
+</div>
+<div class="sidebar sidebar-right">
+  <ul>
+      <li><a href="#scrollspy">Scrollspy</a></li>
+      <li><a href="#fat">Fat</a></li>
+      <li><a href="#um">Um</a></li>
+      <li><a href="#2">Dois</a></li>
+      <li><a href="#3">Três</a></li>
+      <li><a href="#aninhada">Exemplo nav aninhada</a></li>
+      <li><a href="#data">Atributos Data</a></li>
+      <li><a href="#java">Via Javascript</a></li>
+      <li><a href="#metodos">Metodos</a></li>
+      <li><a href="#parametros">Parâmetros</a></li>
+      <li><a href="#eventos">Eventos</a></li>
+  </ul>
+</div>
+    <main>
+      <div class="content"></div>
+        <article>
+            <h1>Progress</h1>
+            <p>Documentação e exemplos de uso das barras de progresso Bootstrap, além de barras empilhadas, backgrounds
+                animados e rótulos.</p>
+        </article>
+        <article>
+            <h2>Como funciona</h2>
+            <p>Componentes de progresso são feitos com dois elementos HTML, um pouco de CSS para a largura e outros
+                atributos. Não usamos o elemento HTML5 &lt;progress&gt; para garantir que você possa empilhar barras de
+                progresso e colocar textos sobre elas.</p>
+            <ul>
+                <li>Nós usamos o elemento com <span class="red">.progress</span> como um envolto para indicar o valor
+                    máximo da barra de progresso;</li>
+                <li>Nós usamos o elemento interno com <span class="red">.progress-bar</span> para indicar o progresso da
+                    barra, até então;</li>
+                <li>A <span class="red">.progress-bar</span> exige um CSS inline, classe utilitária ou CSS
+                    personalizado, para definir sua largura;</li>
+                <li>A classe <span class="red">.progress-bar</span> também exige o uso de alguns atributos <span
+                        class="red">role</span> e <span class="red">aria</span> para fazê-lo acessível.</li>
+            </ul>
+            <p>Junte tudo isso e consiga o seguinte:</p>
+            <div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div>
+<pre class="language-html">
+<code>
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+            </div>
+            <p>Bootstrap provê um punhado de utilitários para definir largura. Dependendo de suas necessidades, elas
+                podem ajudar a configurar seu progresso, rapidamente.
+            </p>
+
+
+            <div class="progress">
+                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+            </div>
+            <div>
+<pre class="language-html">
+<code>
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+            </div>
+        </article>
+
+        <article>
+            <h2>Rótulos</h2>
+            <p>Use rótulos em suas barras de progressos, colocando texto dentro do elemento com .progress-bar.</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+              </div>
+              <div>
+<pre class="language-html">
+<code>
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;25%&lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+              </div>
+        </article>
+
+        <article>
+            <h2>Altura</h2>
+            <p>Nós só definimos um valor para altura no .progress, então, se você alterar o valor, o elemento interno .progress-bar vai se redimensionar propocionalmente, automaticamente.</p>
+            <div class="progress" style="height: 1px;">
+                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="progress" style="height: 20px;">
+                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div>
+<pre class="language-html">
+<code>
+  &lt;div class="progress" style="height: 1px;"&gt;
+    &lt;div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="progress" style="height: 20px;"&gt;
+    &lt;div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+              </div>
+        </article>
+        <article>
+            <h2>Backgrounds</h2>
+            <p>Use classes utilitárias de background para mudar a aparência das barras de progresso.</p>
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div>
+<pre class="language-html">
+<code>
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>                  
+              </div>
+        </article>
+
+        <article>
+            <h2>Múltiplas barrras</h2>
+            <p>Crie várias barras de progresso, dentro de um único componente de progresso, se precisar.</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+
+              <div>
+<pre class="language-html">
+<code>
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+    &lt;div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+    &lt;div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>                  
+              </div>
+        </article>
+        <article>
+            <h2>Listrada</h2>
+            <p>Adicione .progress-bar-striped em qualquer .progress-bar para aplicar uma listra sobre a cor de fundo, via gradiente CSS.</p>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+
+              <div>
+<pre class="language-html">
+<code>
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>                  
+              </div>
+        </article>
+
+        <article>
+            <h2>Listras animadas</h2>
+            <p>O gradiente listrado também pode ser animado. Use .progress-bar-animated no .progress-bar para animar as listras, da direita para esquerda, via animações CSS3.</p>
+
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              </div>
+
+              <div>
+<pre class="language-html">
+<code>
+  &lt;div class="progress"&gt;
+    &lt;div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+</code>
+</pre>                  
+              </div>
+        </article>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.js"></script>
+</body>
+</html>

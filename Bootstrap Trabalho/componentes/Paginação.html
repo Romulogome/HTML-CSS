@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paginação</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/Paginação.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navigation">
+        <ul>
+            <li><a href="/index.html">Início</a></li>
+            <li><a href="">Documentação</a></li>
+            <li><a href="/paginas/pagina2.html">Componentes</a></li>
+            <li><a href="/paginas/pagina5.html">Exemplos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+  <div class="sidebar sidebar-left">
+    <!-- Conteúdo da barra lateral esquerda -->
+    <ul>
+        <li><a href="/paginas/pagina2.html">Alertas</a></li>
+        <li><a href="/componentes/cores-de-links.html">Cores de links</a></li>
+        <li><a href="/componentes/badges.html" >Badges</a></li>
+        <li><a href="/componentes/breadcrumb.html">Breadcrumb</a></li>
+        <li><a href="/componentes/botoes.html">Botões</a></li>
+        <li><a href="/componentes/grupos-botoes.html">Grupos de botões</a></li>
+        <li><a href="">Cards</a></li>
+        <li><a href="">Carousel</a></li>
+        <li><a href="">Collapse</a></li>
+        <li><a href="">Dropdowns</a></li>
+        <li><a href="">Formulários</a></li>
+        <li><a href="/paginas/pagina3.html">Grupo de input</a></li>
+        <li><a href="/componentes/grupos-lista.html">Grupo de lista</a></li>
+        <li><a href="/componentes/modal.html">Modal</a></li>
+        <li><a href="">Navs</a></li>
+        <li><a href="/componentes/Paginação.html">Paginação</a></li>
+        <li><a href="/componentes/Popovers.html">Popovers</a></li>
+        <li><a href="/componentes/Progress.html">Progress</a></li>
+        <li><a href="/componentes/Scrollspy.html">Scrollspy</a></li>
+        <li><a href="/paginas/pagina4.html">Tooltips</a></li>
+    </ul>
+  </div>
+  <div class="sidebar sidebar-right">
+    <ul>
+      <li><a href="#Paginação">Paginação</a></li>
+      <li><a href="#trabalhando_com_icone">trabalhando com icone</a></li>
+      <li><a href="#ativo_desativado">Estados desativado e ativado</a></li>
+      <li><a href="#tamanhos">Tamanhos</a></li>
+      <li><a href="#Alinhamento">Alinhamento</a></li>
+    </ul>
+  </div>
+    <main>
+      <div class="content"></div>
+        <article>
+            <h1 id="Paginacao">Paginação</h1>
+            <p>Documentação e exemplos de paginação para indicar um série de conteúdos relacionados, existentes em
+                várias páginas.</p>
+        </article>
+        <article>
+            <h2>Visão geral</h2>
+            <p>
+                Nós usamos um grande bloco de links conectados para nossa paginação, fazendo-os fácil de clicar e
+                escalar. A paginação é feita com elementos HTML de lista para que leitores de telas possam anunciar o
+                número de links disponíveis. Use um elemento &lt;nav&gt; como envolto para identificá-lo como uma seção
+                de navegação aos leitores de telas e outras tecnologias assistivas. <br>
+
+                Além do mais, já que as páginas possuem mais de uma seção de navegação, normalmente, é aconselhado usar
+                um aria-label descritivo, no &lt;nav&gt;. Por exemplo, se o componente de paginação é usado para navegar
+                entre um conjunto de resultados de pesquisa, uma boa aria-label seria aria-label="Páginas dos resultados
+                de pesquisa".
+            </p>
+            <div>
+                <nav aria-label="Navegação de página exemplo">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Próximo</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+<pre class="language-html">
+<code>
+  &lt;nav aria-label="Navegação de página exemplo"&gt;
+    &lt;ul class="pagination"&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Anterior&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Próximo&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+</code>
+</pre>
+
+            </div>
+        </article>
+
+        <article>
+            <h2 id="trabalhando_com_icone">Trabalhando com ícones</h2>
+            <p>Querendo usar um ícone ou símbolo, no lugar de texto, em alguns links de paginação? Se assegure de usar
+                os atributos aria apropriados e utilitários .sr-only.</p>
+            <div>
+                <nav aria-label="Navegação de página exemplo">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Anterior">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Anterior</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Próximo">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Próximo</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+<pre class="language-html">
+<code>
+  &lt;nav aria-label="Navegação de página exemplo"&gt;
+    &lt;ul class="pagination"&gt;
+      &lt;li class="page-item"&gt;
+        &lt;a class="page-link" href="#" aria-label="Anterior"&gt;
+          &lt;span aria-hidden="true"&gt;&laquo;&lt;/span&gt;
+          &lt;span class="sr-only"&gt;Anterior&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;
+        &lt;a class="page-link" href="#" aria-label="Próximo"&gt;
+          &lt;span aria-hidden="true"&gt;&raquo;&lt;/span&gt;
+          &lt;span class="sr-only"&gt;Próximo&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+</code>
+</pre>
+            </div>
+
+            <article>
+                <h2 id="ativo_desativo">Estados desativado e ativado</h2>
+                <p>Links de paginação são personalizáveis para diferentes ocasiões. Use .disabled para links não poderem
+                    ser clicados e .active para indicar a página atual. <br>
+
+                    Apesar da classe .disabled usar pointer-events: none para tentar desativar a funcionalidade de link
+                    do &lt;a&gt;, esta propriedade CSS ainda não é padronizada e não conta com navegação pelo teclado.
+                    Assim, você deve sempre colocar tabindex="-1" em links desativados e usar JavaScript personalizado
+                    para desativar suas funcionalidades, totamente.</p>
+                <div>
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">2 <span class="sr-only">(atual)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Próximo</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+<pre class="language-html">
+<code>
+  &lt;nav aria-label="..."&gt;
+    &lt;ul class="pagination"&gt;
+      &lt;li class="page-item disabled"&gt;
+        &lt;a class="page-link" href="#" tabindex="-1"&gt;Anterior&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item active"&gt;
+        &lt;a class="page-link" href="#"&gt;2 &lt;span class="sr-only"&gt;(atual)&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;
+        &lt;a class="page-link" href="#"&gt;Próximo&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+</code>
+</pre>
+                </div>
+
+
+                <div>
+                    <p>Opcionalmente, você pode trocar âncoras ativadas e desativadas por <span> ou, omitir a âncora no
+                            caso de flechas anterior/próximo, para remover a funcionalide de clique e evitar foco de
+                            teclado, enquanto mantém os estilos.</p>
+                    <div>
+                        <nav aria-label="...">
+                            <ul class="pagination">
+                                <li class="page-item disabled">
+                                    <span class="page-link">Anterior</span>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active">
+                                    <span class="page-link">
+                                        2
+                                        <span class="sr-only">(atual)</span>
+                                    </span>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Próximo</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div>
+<pre class="language-html">
+<code>
+  &lt;nav aria-label="..."&gt;
+    &lt;ul class="pagination"&gt;
+      &lt;li class="page-item disabled"&gt;
+        &lt;span class="page-link"&gt;Anterior&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item active"&gt;
+        &lt;span class="page-link"&gt;
+          2
+          &lt;span class="sr-only"&gt;(atual)&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;
+        &lt;a class="page-link" href="#"&gt;Próximo&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+</code>
+</pre>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h2 id="tamanhos">Tamanhos</h2>
+                <p>Paginação grande e chique ou pequena? Use .pagination-lg ou .pagination-sm para desfrutar dos
+                    diferentes tamanhos.</p>
+                <div>
+                    <nav aria-label="...">
+                        <ul class="pagination pagination-lg">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">1</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div>
+<pre class="language-html">
+<code>
+  &lt;nav aria-label="..."&gt;
+    &lt;ul class="pagination pagination-lg"&gt;
+      &lt;li class="page-item disabled"&gt;
+        &lt;a class="page-link" href="#" tabindex="-1"&gt;1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+</code>
+                  </pre>
+                </div>
+
+                <div>
+                    <nav aria-label="...">
+                        <ul class="pagination pagination-sm">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">1</a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        </ul>
+                      </nav>
+                </div>
+                <div>
+<pre class="language-html">
+<code>
+  &lt;nav aria-label="..."&gt;
+    &lt;ul class="pagination pagination-sm"&gt;
+      &lt;li class="page-item disabled"&gt;
+        &lt;a class="page-link" href="#" tabindex="-1"&gt;1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+</code>
+</pre>
+                </div>
+            </article>
+
+            <article>
+                <h2 id="alinhamento">Alinhamento</h2>
+                <p>Altere o alinhamento dos componentes de paginação, usando utilitários flexbox.</p>
+                <div>
+                    <nav aria-label="Navegação de página exemplo">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">Próximo</a>
+                          </li>
+                        </ul>
+                      </nav>
+                </div>
+                <div>
+<pre class="language-html">
+<code>
+  &lt;nav aria-label="Navegação de página exemplo"&gt;
+    &lt;ul class="pagination justify-content-center"&gt;
+      &lt;li class="page-item disabled"&gt;
+        &lt;a class="page-link" href="#" tabindex="-1"&gt;Anterior&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;
+        &lt;a class="page-link" href="#"&gt;Próximo&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+</code>
+</pre>
+                </div>
+
+
+                <div>
+                    <nav aria-label="Navegação de página exemplo">
+                        <ul class="pagination justify-content-end">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">Próximo</a>
+                          </li>
+                        </ul>
+                      </nav>
+                </div>
+                <div>
+<pre class="language-html">
+<code>
+  &lt;nav aria-label="Navegação de página exemplo"&gt;
+    &lt;ul class="pagination justify-content-end"&gt;
+      &lt;li class="page-item disabled"&gt;
+        &lt;a class="page-link" href="#" tabindex="-1"&gt;Anterior&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;
+        &lt;a class="page-link" href="#"&gt;Próximo&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+</code>
+</pre>
+                      
+                </div>
+            </article>
+        </article>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.js"></script>
+</body>
+
+</html>
